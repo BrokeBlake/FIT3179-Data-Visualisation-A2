@@ -1,0 +1,86 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 780,
+    
+    
+    "projection":
+    {
+        "type": "equirectangular",
+        "scale": 23000,
+        "center": [145, -37.9]
+        
+    },
+    "layer":
+    [
+        {
+            "data":
+            {
+                "sphere": true
+            },
+            "mark":
+            {
+                "type": "geoshape",
+                "fill": "lightblue",
+                "stroke": "white"
+            }
+        },
+        {
+            "data":
+            {
+                "url": "../data/vic_land.geojson"
+            },
+            "mark":
+            {
+                "type": "geoshape",
+                "fill": "beige",
+                "stroke": "brown"
+            }
+        },
+        {
+            "data":
+            {
+                "url": "../data/boolean_GHS_melbourne_large.csv"
+            },
+            "mark":
+            {
+                "type": "rect",
+                "width": 4,
+                "height": 4.8
+            },
+            "encoding":
+            {
+                "longitude":
+                {
+                    "field": "x",
+                    "type": "quantitative"
+                },
+                "latitude":
+                {
+                    "field": "y",
+                    "type": "quantitative"},
+                "color":
+                {
+                    "field": "year",
+                    "type": "ordinal",
+                    "scale": {"scheme": "category20"}
+                },
+                "tooltip":
+                [
+                    {
+                        "field": "x",
+                        "type": "quantitative"
+                    },
+                    {
+                        "field": "y",
+                        "type": "quantitative"
+                    },
+                    {
+                        "field": "year",
+                        "type": "quantitative"
+                    }
+                ]
+            }
+        }
+    ]
+}
