@@ -29,7 +29,7 @@
         {
             "data":
             {
-                "url": "../data/vic_land.geojson"
+                "url": "/data/vic_land.geojson"
             },
             "mark":
             {
@@ -41,7 +41,7 @@
         {
             "data":
             {
-                "url": "../data/boolean_GHS_melbourne_large.csv"
+                "url": "/data/boolean_GHS_melbourne_large.csv"
             },
             "mark":
             {
@@ -96,7 +96,7 @@
         {
             "data":
             {
-                "url": "../data/vic_rivers.geojson"
+                "url": "/data/vic_rivers.geojson"
             },
             "mark":
             {
