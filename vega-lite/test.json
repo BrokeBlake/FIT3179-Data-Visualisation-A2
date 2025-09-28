@@ -1,7 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 800,
-    "height": 780,
+    "height": 600,
+    "title": "Greater Melbourne's Urban Sprawl over time",
     
     
     "projection":
@@ -45,8 +46,8 @@
             "mark":
             {
                 "type": "rect",
-                "width": 4,
-                "height": 4.8
+                "width": 1,
+                "height": 1.2
             },
             "encoding":
             {
@@ -63,23 +64,46 @@
                 {
                     "field": "year",
                     "type": "ordinal",
-                    "scale": {"scheme": "category20"}
+                    "scale":
+                    {
+                        "scheme": "goldgreen"
+                    },
+                    "legend":
+                    {
+                        "title": "Year of Urban Development"
+                    }
                 },
                 "tooltip":
                 [
                     {
                         "field": "x",
-                        "type": "quantitative"
+                        "type": "quantitative",
+                        "title": "Longtitude:"
                     },
                     {
                         "field": "y",
-                        "type": "quantitative"
+                        "type": "quantitative",
+                        "title": "Latitude:"
                     },
                     {
                         "field": "year",
-                        "type": "quantitative"
+                        "type": "quantitative",
+                        "title": "Year considered developed"
                     }
                 ]
+            }
+        },
+        {
+            "data":
+            {
+                "url": "../data/vic_rivers.geojson"
+            },
+            "mark":
+            {
+                "type": "geoshape",
+                "fill": null,
+                "stroke": "lightblue",
+                "strokeWidth": "2"
             }
         }
     ]
