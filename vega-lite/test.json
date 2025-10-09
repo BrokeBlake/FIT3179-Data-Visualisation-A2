@@ -29,7 +29,7 @@
         {
             "data":
             {
-                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/data/vic_land.geojson"
+                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/vic_land.geojson"
             },
             "mark":
             {
@@ -41,7 +41,7 @@
         {
             "data":
             {
-                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/data/builtup-point-data.csv"
+                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/builtup-point-data.csv"
             },
             "mark":
             {
@@ -97,7 +97,7 @@
         {
             "data":
             {
-                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/data/vic_rivers.geojson"
+                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/vic_rivers.geojson"
             },
             "mark":
             {

@@ -1,0 +1,72 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"width": 600,
+	"height": 600,
+	"data":
+    {
+		"url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/vic_suburb_boundaries_topojson.json",
+		"format":
+        {
+			"type": "topojson",
+			"feature": "suburbs"
+		}
+	},
+	"transform":
+    [
+		{
+			"lookup": "properties.suburb",
+			"from":
+            {
+				"data":
+                {
+					"url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/population_by_suburb.csv"
+				},
+				"key": "suburb",
+				"fields": ["pop_density", "year"]
+			}
+		},
+		{
+			"filter": "datum.year == 2023"
+		}
+	],
+	"projection":
+    {
+		"type": "mercator"
+	},
+	"mark":
+    {
+		"type": "geoshape",
+		"stroke": "white",
+		"strokeWidth": 0.5
+	},
+	"encoding":
+    {
+		"color":
+        {
+			"field": "pop_density",
+			"type": "quantitative",
+			"title": "Population Density",
+			"scale":
+            {
+				"scheme": "blues"
+			}
+		},
+		"tooltip":
+        [
+			{
+				"field": "properties.suburb",
+				"type": "nominal",
+				"title": "Suburb"
+			},
+			{
+				"field": "pop_density",
+				"type": "quantitative",
+				"title": "Density"
+			},
+			{
+				"field": "year",
+				"type": "ordinal"
+			}
+		]
+	}
+}
