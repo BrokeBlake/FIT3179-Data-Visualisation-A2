@@ -7,8 +7,8 @@
     "projection":
     {
         "type": "mercator",
-        "scale": 23000,
-        "center": [145, -37.9]
+        "scale": 40000,
+        "center": [145, -37.875]
         
     },
     
@@ -29,25 +29,37 @@
         {
             "data":
             {
-                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/vic_land.geojson"
+                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/vic_suburb_boundaries_topojson.json",
+                "format":
+                {
+                    "type": "topojson",
+                    "feature": "vic_suburb_boundaries"
+                }
             },
             "mark":
             {
                 "type": "geoshape",
-                "fill": "beige",
-                "stroke": "brown"
+                "stroke": "white",
+                "strokeWidth": 0.5
+            },            
+            "encoding":
+            {
+                "color":
+                {
+                    "value": "#eeeeee" 
+                }
             }
         },
         {
             "data":
             {
-                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/builtup-point-data.csv"
+                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/builtup_point_data.csv"
             },
             "mark":
             {
                 "type": "rect",
-                "width": 1,
-                "height": 1.2
+                "width": 3,
+                "height": 3.6
             },
             "encoding":
             {
