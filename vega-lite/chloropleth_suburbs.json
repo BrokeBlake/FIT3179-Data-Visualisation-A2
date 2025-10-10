@@ -2,7 +2,11 @@
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"width": 800,
 	"height": 600,
-    "title": "Temporal Population Density (1975-2030)",
+    "title": "Melbourne - Population Density (1975-2030)",
+    "config":
+    {
+        "background": "#eaf2f8"
+    },
 
     "projection":
     {
@@ -81,7 +85,7 @@
                     },
                     "legend": 
                     {
-                        "values": [0, 1000, 5000, 19530]
+                        "values": [0, 250, 1000, 2500, 5000, 10000, 19530]
                     }
                 },
                 "tooltip":
@@ -112,6 +116,227 @@
                         "title": "Year"
                     }
                 ]
+            }
+        },
+        {
+            "data":
+            {
+                "values":
+                [
+                    {
+                    "lat": -38.02,
+                    "lon": 144.75,
+                    "label": "Fast growing Outer suburbs"
+                    }
+            ]   
+            },
+            "mark":
+            {
+                "type": "text",
+                "fontSize": 14,
+                "color": "darkgreen"
+            },
+            "encoding":
+            {
+                "longitude":
+                {
+                    "field": "lon",
+                    "type": "quantitative"
+                },
+                "latitude":
+                {
+                    "field": "lat",
+                    "type": "quantitative"
+                },
+                "text":
+                {
+                    "field": "label"
+                }
+            }
+        },
+        {
+            "data":
+            {
+                "values":
+                [
+                    {
+                        "lat1": 144.8,
+                        "lon1": -37.98,
+                        "lat2": 144.74,
+                        "lon2": -37.87
+                    }
+                ]
+            },
+            "mark":
+            {
+                "type": "rule",
+                "color": "green",
+                "strokeWidth": 2
+            },
+            "encoding":
+            {
+                "longitude":
+                {
+                    "field": "lat1",
+                    "type": "quantitative"
+                },
+                "latitude":
+                {
+                    "field": "lon1",
+                    "type": "quantitative"
+                },
+                "longitude2":
+                {
+                    "field": "lat2"
+                },
+                "latitude2":
+                {
+                    "field": "lon2"
+                }
+            }
+        },
+        {
+            "data":
+            {
+                "values":
+                [
+                    {
+                        "lat1": 144.8,
+                        "lon1": -37.98,
+                        "lat2": 144.76,
+                        "lon2": -37.72
+                    }
+                ]
+            },
+            "mark":
+            {
+                "type": "rule",
+                "color": "green",
+                "strokeWidth": 2
+            },
+            "encoding":
+            {
+                "longitude": {"field": "lat1","type": "quantitative"},
+                "latitude": {"field": "lon1","type": "quantitative"},
+                "longitude2": {"field": "lat2"},
+                "latitude2": {"field": "lon2"}
+            }
+        },
+                {
+            "data":
+            {
+                "values":
+                [
+                    {
+                        "lat1": 144.8,
+                        "lon1": -37.98,
+                        "lat2": 144.76,
+                        "lon2": -37.72
+                    }
+                ]
+            },
+            "mark":
+            {
+                "type": "rule",
+                "color": "green",
+                "strokeWidth": 2
+            },
+            "encoding":
+            {
+                "longitude": {"field": "lat1","type": "quantitative"},
+                "latitude": {"field": "lon1","type": "quantitative"},
+                "longitude2": {"field": "lat2"},
+                "latitude2": {"field": "lon2"}
+            }
+        },
+        {
+            "data":
+            {
+                "values":
+                [
+                    {
+                        "lat1": 144.8,
+                        "lon1": -37.98,
+                        "lat2": 145.29,
+                        "lon2": -38.08
+                    }
+                ]
+            },
+            "mark":
+            {
+                "type": "rule",
+                "color": "green",
+                "strokeWidth": 2
+            },
+            "encoding":
+            {
+                "longitude": {"field": "lat1","type": "quantitative"},
+                "latitude": {"field": "lon1","type": "quantitative"},
+                "longitude2": {"field": "lat2"},
+                "latitude2": {"field": "lon2"}
+            }
+        },
+        {
+            "data":
+            {
+                "values":
+                [
+                    {
+                    "lat": -37.7,
+                    "lon": 144.96,
+                    "label": "Inner City Urbanisation"
+                    }
+            ]   
+            },
+            "mark":
+            {
+                "type": "text",
+                "fontSize": 14,
+                "color": "purple"
+            },
+            "encoding":
+            {
+                "longitude":
+                {
+                    "field": "lon",
+                    "type": "quantitative"
+                },
+                "latitude":
+                {
+                    "field": "lat",
+                    "type": "quantitative"
+                },
+                "text":
+                {
+                    "field": "label"
+                }
+            }
+        },
+        {
+            "data":
+            {
+                "values":
+                [
+                    {
+                        "lat1": 144.96,
+                        "lon1": -37.72,
+                        "lat2": 144.95,
+                        "lon2": -37.82
+                    }
+                ]
+            },
+            "mark":
+            {
+                "type": "rule",
+                "color": "purple",
+                "strokeWidth": 2
+            },
+            "encoding":
+            {
+                "longitude": {"field": "lat1","type": "quantitative"},
+                "latitude": {"field": "lon1","type": "quantitative"},
+                "longitude2": {"field": "lat2"},
+                "latitude2": {"field": "lon2"}
             }
         }
     ]

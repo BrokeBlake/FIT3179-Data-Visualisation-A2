@@ -2,7 +2,11 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 800,
     "height": 600,
-    "title": "Temporal Built-up land (1975-2030)",
+    "title": "Melbourne - Built-up land (1975-2030)",
+    "config":
+    {
+        "background": "#eaf2f8"
+    },
     
     "projection":
     {
@@ -83,7 +87,7 @@
                     },
                     "legend":
                     {
-                        "title": "Year of Urban Development"
+                        "title": "Year considered Developed"
                     }
                 },
                 "tooltip":
