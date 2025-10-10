@@ -7,7 +7,7 @@
     "projection":
     {
         "type": "mercator",
-        "scale": 23000,
+        "scale": 32000,
         "center": [145, -37.9]
         
     },
@@ -15,10 +15,10 @@
     [
         {
             "name": "selectedyear",
-            "value": 1970,
+            "value": 2025,
             "bind": {
             "input": "range",
-            "min": 1970,
+            "min": 1975,
             "max": 2030,
             "step": 5,
             "name": "Choose year: "
@@ -40,22 +40,23 @@
             "transform":
             [
                 {
-                    "lookup": "properties.LOC_NAME",
+                "calculate": "datum.properties.LOC_NAME + toString(selectedyear)",
+                "as": "suburb_year_key"
+                },
+                {
+                    "lookup": "suburb_year_key",
                     "from":
                     {
                         "data":
                         {
                             "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/population_by_suburb.csv"
                         },
-                        "key": "suburb",
+                        "key": "key",
                         "fields":
                         [
                             "pop_density", "year"
                         ]
                     }
-                },
-                { 
-                    "filter": "datum.year == selectedyear && datum.pop_density > 0"
                 }
             ],
             "mark":
@@ -73,9 +74,10 @@
                     "title": "Population Density",
                     "scale":
                     {
-                        "type": "log",
+                        "type": "sqrt",
+                        "domain": [0, 15000],
                         "clamp": true,
-                        "scheme": "blues"
+                        "scheme": "lighttealblue"
                         
                     }
                 },
@@ -89,11 +91,12 @@
                     {
                         "field": "pop_density",
                         "type": "quantitative",
-                        "title": "Density"
+                        "title": "Population Density"
                     },
                     {
                         "field": "year",
-                        "type": "ordinal"
+                        "type": "ordinal",
+                        "title": "Year"
                     }
                 ]
             }
