@@ -1,72 +1,102 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-	"width": 600,
+	"width": 800,
 	"height": 600,
-	"data":
+    "title": "Greater Melbourne's Population Density over time - suburbs",
+
+    "projection":
     {
-		"url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/vic_suburb_boundaries_topojson.json",
-		"format":
-        {
-			"type": "topojson",
-			"feature": "suburbs"
-		}
-	},
-	"transform":
+        "type": "mercator",
+        "scale": 23000,
+        "center": [145, -37.9]
+        
+    },
+    "params":
     [
-		{
-			"lookup": "properties.suburb",
-			"from":
-            {
-				"data":
-                {
-					"url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/population_by_suburb.csv"
-				},
-				"key": "suburb",
-				"fields": ["pop_density", "year"]
-			}
-		},
-		{
-			"filter": "datum.year == 2023"
-		}
-	],
-	"projection":
-    {
-		"type": "mercator"
-	},
-	"mark":
-    {
-		"type": "geoshape",
-		"stroke": "white",
-		"strokeWidth": 0.5
-	},
-	"encoding":
-    {
-		"color":
         {
-			"field": "pop_density",
-			"type": "quantitative",
-			"title": "Population Density",
-			"scale":
+            "name": "selectedyear",
+            "value": 1970,
+            "bind": {
+            "input": "range",
+            "min": 1970,
+            "max": 2030,
+            "step": 5,
+            "name": "Choose year: "
+            }
+        }
+    ],
+    "layer":
+    [
+        {
+            "data":
             {
-				"scheme": "blues"
-			}
-		},
-		"tooltip":
-        [
-			{
-				"field": "properties.suburb",
-				"type": "nominal",
-				"title": "Suburb"
-			},
-			{
-				"field": "pop_density",
-				"type": "quantitative",
-				"title": "Density"
-			},
-			{
-				"field": "year",
-				"type": "ordinal"
-			}
-		]
-	}
+                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/vic_suburb_boundaries_topojson.json",
+                "format":
+                {
+                    "type": "topojson",
+                    "feature": "vic_suburb_boundaries"
+                }
+            },
+            "transform":
+            [
+                {
+                    "lookup": "properties.LOC_NAME",
+                    "from":
+                    {
+                        "data":
+                        {
+                            "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/population_by_suburb.csv"
+                        },
+                        "key": "suburb",
+                        "fields":
+                        [
+                            "pop_density", "year"
+                        ]
+                    }
+                },
+                { 
+                    "filter": "datum.year == selectedyear && datum.pop_density > 0"
+                }
+            ],
+            "mark":
+            {
+                "type": "geoshape",
+                "stroke": "white",
+                "strokeWidth": 0.5
+            },
+            "encoding":
+            {
+                "color":
+                {
+                    "field": "pop_density",
+                    "type": "quantitative",
+                    "title": "Population Density",
+                    "scale":
+                    {
+                        "type": "log",
+                        "clamp": true,
+                        "scheme": "blues"
+                        
+                    }
+                },
+                "tooltip":
+                [
+                    {
+                        "field": "properties.LOC_NAME",
+                        "type": "nominal",
+                        "title": "Suburb"
+                    },
+                    {
+                        "field": "pop_density",
+                        "type": "quantitative",
+                        "title": "Density"
+                    },
+                    {
+                        "field": "year",
+                        "type": "ordinal"
+                    }
+                ]
+            }
+        }
+    ]
 }

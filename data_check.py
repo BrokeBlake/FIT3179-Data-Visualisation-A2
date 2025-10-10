@@ -9,8 +9,8 @@ def check_github_raw_url(url):
             print(f"URL not reachable (HTTP {r.status_code}): {url}")
             return False
         # try to read as CSV
-        from io import StringIO
-        df = pd.read_csv(StringIO(r.text), nrows=5)
+        #from io import StringIO
+        #df = pd.read_csv(StringIO(r.text), nrows=5)
         print(f"GitHub raw URL is accessible and readable: {url}")
         return True
     except Exception as e:
@@ -19,3 +19,5 @@ def check_github_raw_url(url):
 
 
 check_github_raw_url("https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/builtup-point-data.csv")
+check_github_raw_url("https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/population_by_suburb.csv")
+check_github_raw_url("https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/vic_suburb_boundaries_topojson.json")
