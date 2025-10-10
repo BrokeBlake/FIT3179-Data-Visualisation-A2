@@ -2,13 +2,13 @@
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"width": 800,
 	"height": 600,
-    "title": "Greater Melbourne's Population Density over time - suburbs",
+    "title": "Temporal Population Density (1975-2030)",
 
     "projection":
     {
         "type": "mercator",
-        "scale": 32000,
-        "center": [145, -37.9]
+        "scale": 40000,
+        "center": [145, -37.875]
         
     },
     "params":
@@ -54,7 +54,7 @@
                         "key": "key",
                         "fields":
                         [
-                            "pop_density", "year"
+                            "pop_density", "year", "pop_total", "area_km2"
                         ]
                     }
                 }
@@ -71,14 +71,17 @@
                 {
                     "field": "pop_density",
                     "type": "quantitative",
-                    "title": "Population Density",
+                    "title": "Density (pp/km^2)",
                     "scale":
                     {
                         "type": "sqrt",
                         "domain": [0, 15000],
                         "clamp": true,
                         "scheme": "lighttealblue"
-                        
+                    },
+                    "legend": 
+                    {
+                        "values": [0, 1000, 5000, 19530]
                     }
                 },
                 "tooltip":
@@ -89,9 +92,19 @@
                         "title": "Suburb"
                     },
                     {
+                        "field": "pop_total",
+                        "type": "quantitative",
+                        "title": "Total Population"
+                    },
+                    {
                         "field": "pop_density",
                         "type": "quantitative",
-                        "title": "Population Density"
+                        "title": "Population Density (pp/km^2)"
+                    },
+                    {
+                        "field": "area_km2",
+                        "type": "quantitative",
+                        "title": "Area (km^2)"
                     },
                     {
                         "field": "year",
