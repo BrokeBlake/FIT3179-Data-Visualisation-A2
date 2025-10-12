@@ -13,32 +13,135 @@
 
 
     <style>
-        body {
+        body
+        {
             background-color: #eaf2f8;
             font-family: Arial, sans-serif;
             text-align: center; /* center title */
-            margin: 0;
+            margin: 0px;
             padding: 20px;
         }
 
-        h1 {
+        h1
+        {
             margin-bottom: 40px;
         }
 
-        .vertical-container {
-            display: inline-block; /* centre */
-            margin: 20px;
-            padding: 10px;
-            border-radius: 8px;
+        .vertical-container
+        {
+            display: block;
+            max-width: 900px;
+            margin: 0px auto;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .grey-background
+        {
+            background-color: #f0f0f0;
+            border: 4px solid lightgrey;
         }
     </style>
 </head>
 
 <body>
-    <h1> Week 10 Homework - Mapping Greater Melbourne's Urban Sprawl</h1>
+    <div class="vertical-container grey-background">
+        <h1> Urban Sprawl: A symptom of Modern Melbourne</h1>
+
+        <p>
+        <b>Urban Sprawl</b> refers to the widespread, most often unplanned expansion of residential areas
+        at the edges of cities. <span style="color: purple;"><b>Melbourne</b></span>, dubbed
+        the <b>“Doughnut City”</b> in the late 1980s, has witnessed a rapid outward growth over the last half century,
+        reshaping the way people live, work, and move.
+
+        <br><br>
+        The impact of urban sprawl remains a highly debated topic among planners, economists, and communities.
+        <br><br>
+
+        <span style="color: green;"><b>Supporters</b></span> highlight its role in 
+        <b>making housing more affordable</b>, providing families with <b>larger homes and backyards</b>, 
+        and aligning with <b>consumer preferences</b> towards low density living.
+        <br>
+        <span style="color: red;"><b>Critics</b></span>, on the other hand, point to
+        <b>increased automobile dependency</b>, <b>inefficient land use</b>, 
+        and the <b>loss of prime agricultural land</b> as major drawbacks.
+        </p>
+    </div>
+
+    <div class="vertical-container" id="chloropleth_map"> </div>
+
+
+    <div class="vertical-container grey-background">
+        <p>
+            Since the early 1990s, the Victorian Government has introduced several <b>urban growth strategies</b>
+            designed to contain sprawl while promoting <b>inner-city revitalisation</b>. Use the graph above to explore
+            the growth and decline of all of Melbourne's suburbs over the previous 50 years.
+
+            <br>
+            Most famously, the 2001 initiaitive <b>Melbourne 2030</b> sought to curb urban sprawl by introducting urban growth boundaries
+            , reducing the proportion of low-density housing, and redirecting development into designated "activity centres".
+            In addition, Melbourne 2030 
+        </p>
+        
+        
+    </div>  
+
+    <div class="vertical-container grey-background">
+
+        <p>
+            Different parts of Melbourne have had different population densities over time.
+
+            <br> <b>Rural / Very Low Density</b> - 0-50 people per square kilometre
+            <br> <b>Peri-urban / Low Density</b> - 50-500 people per square kilometre
+            <br> <b>Suburban / Medium Density</b> - 500-2000 people per square kilometre
+            <br> <b>Urban / High Density</b> - 2000-10000 people per square kilometre
+            <br> <b>City Centre / Very High Density</b> - 10000+ people per square kilometre
+        </p>
+
+    </div>
+
+    <div class="vertical-container">
+
+        <p>
+            TODO: Melbourne Low / Medium / High density change over time
+        </p>
+
+    </div>
+
+    <div class="vertical-container grey-background">
+
+        <p>
+            TODO: Different Cities have different population densities - melbourne is very low
+        </p>
+
+    </div>
+
+    <div class="vertical-container">
+
+        <p>
+            TODO: Different city population graph (horizontal bar chart)
+        </p>
+        
+    </div>  
+
 
     <div class="vertical-container" id="point_map"> </div>
-    <div class="vertical-container" id="chloropleth_map"> </div>
+
+    <div class="vertical-container grey-background">
+
+        <p>
+            Above is a built-up heatmap representing the first year in which each point was considered "built up". Built up in this definition means...... What? I dont know! (Yet)
+        </p>
+        
+    </div>
+
+        <div class="vertical-container grey-background">
+
+        <p>
+            TODO: Conclusion
+        </p>
+        
+    </div>
 </body>
 
 

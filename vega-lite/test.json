@@ -95,12 +95,12 @@
                     {
                         "field": "x",
                         "type": "quantitative",
-                        "title": "Longtitude:"
+                        "title": "Longtitude"
                     },
                     {
                         "field": "y",
                         "type": "quantitative",
-                        "title": "Latitude:"
+                        "title": "Latitude"
                     },
                     {
                         "field": "year",
