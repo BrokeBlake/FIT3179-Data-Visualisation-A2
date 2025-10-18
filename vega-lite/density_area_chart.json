@@ -1,8 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "100% stacked area chart showing proportion of land area in each population density bin over time.",
     "width": 800,
     "height": 400,
+    "title":
+    {
+        "text": "Melbourne Population Density Distribution (1975-2030)",
+        "fontSize": 16,
+        "fontWeight": "bold"
+    },
     "data":
     {
         "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/population_density_distribution.csv"
@@ -44,12 +49,25 @@
         "color":
         {
             "field": "density_bin",
-            "type": "nominal",
+            "type": "ordinal",
             "title": "Population Density (people/km²)",
             "scale":
             {
                 "scheme": "redblue"
             },
+            "sort":
+            [
+                "0-50",
+                "50-500",   
+                "500-2000",
+                "2000-4000",
+                "4000-10000",
+                "10000+"
+            ]
+        },
+        "order":
+        {
+            "field": "density_bin",
             "sort":
             [
                 "0-50",
@@ -94,11 +112,5 @@
             "titleFontSize": 13,
             "labelFontSize": 12
         }
-    },
-    "title":
-    {
-        "text": "Relative Population Density Distribution (Melbourne Region)",
-        "fontSize": 16,
-        "fontWeight": "bold"
     }
 }
