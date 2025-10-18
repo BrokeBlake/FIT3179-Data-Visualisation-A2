@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
+    "width": 600,
     "height": 400,
     "title":
     {
-        "text": "Melbourne Population Density Distribution (1975-2030)",
+        "text": "Melbourne: Population Density Distribution by Class (1975-2030)",
         "fontSize": 16,
         "fontWeight": "bold"
     },
@@ -69,7 +69,7 @@
         "color":
         {
             "field": "density_bin",
-            "type": "nominal",
+            "type": "ordinal",
             "scale":
             {
                 "domain":
@@ -78,7 +78,10 @@
                     "2000-4000","500-2000",
                     "50-500","0-50"
                 ],
-                "scheme": "goldgreen"
+                "scheme":
+                {
+                    "name": "yellowgreenblue"
+                }
             },
             "legend":
             {

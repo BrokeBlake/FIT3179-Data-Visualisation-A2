@@ -1,8 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
+    "width": 700,
     "height": 600,
-    "title": "Melbourne - Built-up land (1975-2030)",
+    "title":
+    {
+        "text": "Melbourne: Built-up Land (1975-2030)",
+        "fontSize": 16,
+        "fontWeight": "bold"
+    },
     "config":
     {
         "axis":
@@ -84,15 +89,20 @@
                 "latitude":
                 {
                     "field": "y",
-                    "type": "quantitative"},
+                    "type": "quantitative"
+                },
                 "color":
                 {
                     "field": "year",
                     "type": "ordinal",
                     "scale":
                     {
-                        "scheme": "redyellowblue",
-                        "reverse": true
+                        "scheme":
+                        {
+                            "name": "turbo",
+                            "extent": [0.1, 0.5]
+                        },
+                        "reverse": false
                     },
                     "legend":
                     {
