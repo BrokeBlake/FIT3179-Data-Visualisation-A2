@@ -282,8 +282,8 @@
                 "values":
                 [
                     {
-                    "lat": -37.7,
-                    "lon": 144.96,
+                    "lat": -37.71,
+                    "lon": 145,
                     "label": "Inner City Urbanisation"
                     }
             ]   
@@ -292,7 +292,7 @@
             {
                 "type": "text",
                 "fontSize": 14,
-                "color": "purple"
+                "color": "yellow"
             },
             "encoding":
             {
@@ -328,7 +328,7 @@
             "mark":
             {
                 "type": "rule",
-                "color": "purple",
+                "color": "yellow",
                 "strokeWidth": 2
             },
             "encoding":

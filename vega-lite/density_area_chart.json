@@ -8,6 +8,19 @@
         "fontSize": 16,
         "fontWeight": "bold"
     },
+    "config":
+    {
+        "axis":
+        {
+            "labelFontSize": 12,
+            "titleFontSize": 13
+        },
+        "legend":
+        {
+            "titleFontSize": 13,
+            "labelFontSize": 12
+        }
+    },
     "data":
     {
         "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/population_density_distribution.csv"
@@ -19,7 +32,7 @@
         "line":
         {
             "color": "white",
-            "width": 0.3
+            "width": 0.1
         }
     },
     "encoding":
@@ -27,11 +40,18 @@
         "x":
         {
             "field": "year",
-            "type": "temporal",
+            "type": "quantitative",
             "title": "Year",
             "axis":
             {
-                "labelAngle": 0
+                "labelAngle": 0,
+                "format": "d",
+                "values":
+                [
+                    1975, 1980, 1985, 1990,
+                    1995, 2000, 2005, 2010,
+                    2015, 2020, 2025, 2030
+                ]
             }
         },
         "y":
@@ -49,40 +69,33 @@
         "color":
         {
             "field": "density_bin",
-            "type": "ordinal",
-            "title": "Population Density (people/km²)",
+            "type": "nominal",
             "scale":
             {
-                "scheme": "redblue"
+                "domain":
+                [
+                    "10000+","4000-10000",
+                    "2000-4000","500-2000",
+                    "50-500","0-50"
+                ],
+                "scheme": "goldgreen"
             },
-            "sort":
-            [
-                "0-50",
-                "50-500",   
-                "500-2000",
-                "2000-4000",
-                "4000-10000",
-                "10000+"
-            ]
+            "legend":
+            {
+                "title": "Population Density (people/km²)",
+                "orient": "right"
+            }
         },
         "order":
         {
-            "field": "density_bin",
-            "sort":
-            [
-                "0-50",
-                "50-500",
-                "500-2000",
-                "2000-4000",
-                "4000-10000",
-                "10000+"
-            ]
+            "field": "density_order",
+            "type": "ordinal"
         },
         "tooltip":
         [
             {
                 "field": "year",
-                "type": "temporal"
+                "type": "quantitative"
             },
             {
                 "field": "density_bin",
@@ -94,23 +107,5 @@
                 "format": ".1%"
             }
         ]
-    },
-    "config":
-    {
-        "view":
-        
-        {
-            "stroke": "transparent"
-        },
-        "axis":
-        {
-            "labelFontSize": 12,
-            "titleFontSize": 13
-        },
-        "legend":
-        {
-            "titleFontSize": 13,
-            "labelFontSize": 12
-        }
     }
 }

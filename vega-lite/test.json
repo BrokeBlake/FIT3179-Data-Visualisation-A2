@@ -82,7 +82,7 @@
                     "type": "ordinal",
                     "scale":
                     {
-                        "scheme": "greens",
+                        "scheme": "redyellowblue",
                         "reverse": true
                     },
                     "legend":
