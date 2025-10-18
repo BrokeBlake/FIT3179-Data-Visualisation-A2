@@ -1,0 +1,102 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "100% stacked area chart showing proportion of land area in each population density bin over time.",
+    "data":
+    {
+        "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/population_density_distribution.csv"
+    },
+    "mark":
+    {
+        "type": "area",
+        "interpolate": "monotone",
+        "line":
+        {
+            "color": "white",
+            "width": 0.3
+        }
+    },
+    "encoding":
+    {
+        "x":
+        {
+            "field": "year",
+            "type": "temporal",
+            "title": "Year",
+            "axis":
+            {
+                "labelAngle": 0
+            }
+        },
+        "y":
+        {
+            "aggregate": "sum",
+            "field": "proportion",
+            "stack": "normalize",
+            "type": "quantitative",
+            "title": "Proportion of Total Area",
+            "axis":
+            {
+                "format": ".0%"
+            }
+        },
+        "color":
+        {
+            "field": "density_bin",
+            "type": "nominal",
+            "title": "Population Density (people/km²)",
+            "scale":
+            {
+                "scheme": "redblue"
+            },
+            "sort":
+            [
+                "0-50",
+                "50-500",
+                "500-2000",
+                "2000-4000",
+                "4000-10000",
+                "10000+"
+            ]
+        },
+        "tooltip":
+        [
+            {
+                "field": "year",
+                "type": "temporal"
+            },
+            {
+                "field": "density_bin",
+                "type": "nominal"
+            },
+            {
+                "field": "proportion",
+                "type": "quantitative",
+                "format": ".1%"
+            }
+        ]
+    },
+    "config":
+    {
+        "view":
+        
+        {
+            "stroke": "transparent"
+        },
+        "axis":
+        {
+            "labelFontSize": 12,
+            "titleFontSize": 13
+        },
+        "legend":
+        {
+            "titleFontSize": 13,
+            "labelFontSize": 12
+        }
+    },
+    "title":
+    {
+        "text": "Relative Population Density Distribution (Melbourne Region)",
+        "fontSize": 16,
+        "fontWeight": "bold"
+    }
+}
