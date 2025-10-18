@@ -31,12 +31,20 @@
         {
             margin-bottom: 40px;
         }
+        .main-container
+        {
+            max-width: 1080px;
+            margin: 20px auto 80px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+        }
 
         .vertical-container
         {
             display: block;
-            max-width: 900px;
-            margin: 0px auto;
+            width: 1000px;
+            margin: 20px auto;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
@@ -46,82 +54,110 @@
             background-color: #f0f0f0;
             border: 4px solid lightgrey;
         }
+        .grey-background
+        {
+            background-color: #f0f0f0;
+            border: 4px solid lightgrey;
+        }
+
+        .text_block
+        {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        
     </style>
 </head>
 
 <body>
-    <div class="vertical-container grey-background">
-        <h1> Urban Sprawl: A symptom of Modern Melbourne</h1>
+    <div class="main-container">
+        <div class="vertical-container grey-background">
+            <div class = "text_block">
+                <h1> Urban Sprawl: A Symptom of Modern Melbourne</h1>
 
-        <p>
-        <b>Urban Sprawl</b> refers to the widespread, most often unplanned expansion of residential areas
-        at the edges of cities. <b>Melbourne</b>, dubbed
-        the “Doughnut City” in the late 1980s, has witnessed a rapid outward growth over the last half century,
-        reshaping the way people live, work, and move.
+                <p>
+                <b>Urban Sprawl</b> refers to the widespread, most often unplanned expansion of residential areas
+                at the edges of cities. <b>Melbourne</b>, dubbed
+                the “Doughnut City” in the late 1980s, has witnessed a rapid outward growth over the last half century,
+                reshaping the way people live, work, and move.
 
-        <br><br>
-        The impact of urban sprawl remains a highly debated topic among planners, economists, and communities.
-        <br><br>
+                <br><br>
+                The impact of urban sprawl remains a highly debated topic among planners, economists, and communities.
+                </p>
+            </div>
+        </div>
 
-        <span style="color: green;"><b>Supporters</b></span> highlight its role in 
-        <b>making housing more affordable</b>, providing families with <b>larger homes and backyards</b>, 
-        and aligning with <b>consumer preferences</b> towards low density living.
-        <br>
-        <span style="color: blue;"><b>Critics</b></span>, on the other hand, point to
-        <b>increased automobile dependency</b>, <b>inefficient land use</b>, 
-        and the <b>loss of prime agricultural land</b> as major drawbacks.
-        </p>
+        <div class="vertical-container grey-background">
+            <div class = "text_block">
+                <p>
+
+
+                <span style="color: green;"><b>Supporters</b></span> highlight its role in 
+                <b>making housing more affordable</b>, providing families with <b>larger homes and backyards</b>, 
+                and aligning with <b>consumer preferences</b> towards low density living.
+                <br><br>
+                <span style="color: blue;"><b>Critics</b></span>, on the other hand, point to
+                <b>increased automobile dependency</b>, <b>inefficient land use</b>, 
+                and the <b>loss of prime agricultural land</b> as major drawbacks.
+                </p>
+            </div>
+        </div>
+
+        <div class="vertical-container grey-background" id="chloropleth_map"></div>
+
+
+        <div class="vertical-container grey-background">
+            <div class = "text_block"></div>
+                <p>
+                    Since the early 1990s, the Victorian Government has introduced several <b>urban growth strategies</b>
+                    designed to contain sprawl while promoting <b>inner-city revitalisation</b>. Use the graph above to explore
+                    the growth and decline of all of Melbourne's suburbs over the previous 50 years.
+
+                    <br><br>
+                    Most famously, the 2001 initiaitive <b>Melbourne 2030</b> sought to curb urban sprawl by introducting urban growth boundaries
+                    , reducing the proportion of low-density housing, and redirecting development into designated "activity centres".
+
+                    <br><br>
+
+                    These policies have had a significant impact on revitalising Melbourne's innermost suburbs, as you can see in the above chart.
+                    CBD-adjacent suburbs such as <b>Docklands</b> and <b>Southbank</b> have seen over 1000% growth in the last 50 years.
+                </p>
+            </div>
+        </div>  
     </div>
 
-    <div class="vertical-container" id="chloropleth_map"> </div>
+    <div class="main-container">
+        <div class="vertical-container grey-background">
 
+            <p>
+                Different parts of Melbourne have had different population densities over time.
 
-    <div class="vertical-container grey-background">
-        <p>
-            Since the early 1990s, the Victorian Government has introduced several <b>urban growth strategies</b>
-            designed to contain sprawl while promoting <b>inner-city revitalisation</b>. Use the graph above to explore
-            the growth and decline of all of Melbourne's suburbs over the previous 50 years.
+                <br> <b>Rural / Very Low Density</b> - 0-50 people per square kilometre
+                <br> <b>Peri-urban / Low Density</b> - 50-500 people per square kilometre
+                <br> <b>Suburban / Medium Density</b> - 500-2000 people per square kilometre
+                <br> <b>Urban / High Density</b> - 2000-10000 people per square kilometre
+                <br> <b>City Centre / Very High Density</b> - 10000+ people per square kilometre
+            </p>
 
-            <br>
-            Most famously, the 2001 initiaitive <b>Melbourne 2030</b> sought to curb urban sprawl by introducting urban growth boundaries
-            , reducing the proportion of low-density housing, and redirecting development into designated "activity centres".
-            In addition, Melbourne 2030 
-        </p>
-        
-        
-    </div>  
+        </div>
 
-    <div class="vertical-container grey-background">
+        <div class="vertical-container grey-background">
 
-        <p>
-            Different parts of Melbourne have had different population densities over time.
+            <p>
+                TODO: Melbourne Low / Medium / High density change over time
+            </p>
 
-            <br> <b>Rural / Very Low Density</b> - 0-50 people per square kilometre
-            <br> <b>Peri-urban / Low Density</b> - 50-500 people per square kilometre
-            <br> <b>Suburban / Medium Density</b> - 500-2000 people per square kilometre
-            <br> <b>Urban / High Density</b> - 2000-10000 people per square kilometre
-            <br> <b>City Centre / Very High Density</b> - 10000+ people per square kilometre
-        </p>
+        </div>
 
+        <div class="vertical-container grey-background">
+
+            <p>
+                TODO: Different Cities have different population densities - melbourne is very low
+            </p>
+
+        </div>
     </div>
-
-    <div class="vertical-container">
-
-        <p>
-            TODO: Melbourne Low / Medium / High density change over time
-        </p>
-
-    </div>
-
     <div class="vertical-container grey-background">
-
-        <p>
-            TODO: Different Cities have different population densities - melbourne is very low
-        </p>
-
-    </div>
-
-    <div class="vertical-container">
 
         <p>
             TODO: Different city population graph (horizontal bar chart)
@@ -130,7 +166,7 @@
     </div>  
 
 
-    <div class="vertical-container" id="point_map"> </div>
+    <div class="vertical-container grey-background" id="point_map"> </div>
 
     <div class="vertical-container grey-background">
 

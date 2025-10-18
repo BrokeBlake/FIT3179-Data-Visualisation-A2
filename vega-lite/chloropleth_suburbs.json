@@ -5,7 +5,16 @@
     "title": "Melbourne - Population Density (1975-2030)",
     "config":
     {
-        "background": "#eaf2f8"
+        "axis":
+        {
+            "labelFontSize": 12,
+            "titleFontSize": 13
+        },
+        "legend":
+        {
+            "titleFontSize": 13,
+            "labelFontSize": 12
+        }
     },
 
     "projection":
