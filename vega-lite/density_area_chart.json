@@ -1,6 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "100% stacked area chart showing proportion of land area in each population density bin over time.",
+    "width": 800,
+    "height": 400,
     "data":
     {
         "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/population_density_distribution.csv"
