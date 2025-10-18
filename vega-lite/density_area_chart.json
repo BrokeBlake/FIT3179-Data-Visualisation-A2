@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
+    "width": "container",
     "height": 400,
     "title":
     {
@@ -82,7 +82,7 @@
             },
             "legend":
             {
-                "title": "Population Density (people/km²)",
+                "title": "Density (pp/km²)",
                 "orient": "right"
             }
         },

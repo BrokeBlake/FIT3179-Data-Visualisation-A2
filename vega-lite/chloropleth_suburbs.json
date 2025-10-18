@@ -1,6 +1,6 @@
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-	"width": 800,
+	"width": "container",
 	"height": 600,
     "title": "Melbourne - Population Density (1975-2030)",
     "config":
@@ -84,7 +84,7 @@
                 {
                     "field": "pop_density",
                     "type": "quantitative",
-                    "title": "Density (pp/km^2)",
+                    "title": "Density (pp/km²)",
                     "scale":
                     {
                         "type": "sqrt",
