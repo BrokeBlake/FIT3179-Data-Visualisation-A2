@@ -80,7 +80,7 @@
                 ],
                 "scheme":
                 {
-                    "name": "yellowgreenblue"
+                    "name": "viridis"
                 }
             },
             "legend":

@@ -99,8 +99,7 @@
                     {
                         "scheme":
                         {
-                            "name": "turbo",
-                            "extent": [0.1, 0.5]
+                            "name": "goldgreen"
                         },
                         "reverse": false
                     },
