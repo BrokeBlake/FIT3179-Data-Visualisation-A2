@@ -1,50 +1,50 @@
-"City","Country","Population_Density","Population"
-"Addis Ababa","Ethiopia",15656.908,5704000
-"Amsterdam","Netherlands",4732.953,1477213
-"Bangkok","Thailand",7062.674,18007000
-"Beijing","China",8329.773,18522000
-"Buenos Aires","Argentina",6486.6934,16710000
-"Cairo","Egypt",15018.051,20296000
-"Chicago","United States",2599.577,8489066
-"Chongqing","China",12939.802,12135000
-"Dhaka","Bangladesh",5643.195,19134000
-"Dubai","United Arab Emirates",5345.9927,3331420
-"Guangzhou","China",6660.63,26940000
-"Hanoi","Vietnam",5368.13,8587100
-"Ho Chi Minh City","Vietnam",9790.067,15136000
-"Hong Kong","China",21852.725,7450022
-"Istanbul","Turkey",11197.969,14441000
-"Jakarta","Indonesia",8787.413,33756000
-"Johannesburg","South Africa",4893.4185,7860781
-"Karachi","Pakistan",25217.87,20249000
-"Khartoum","Sudan",7426.7114,7869000
-"Kinshasa","Democratic Republic of the Congo",26582.512,17223982
-"Kolkata","India",9393.467,8227533
-"Kuala Lumpur","Malaysia",6278.5117,8911000
-"Lagos","Nigeria",10713.966,16637000
-"Lahore","Pakistan",15929.911,12306000
-"Lima","Peru",11004.171,10320000
-"London","United Kingdom",6311.906,11262000
-"Los Angeles","United States",2995.6274,11885717
-"Madrid","Spain",4732.953,6211000
-"Manila","Philippines",10145.279,24922000
-"Melbourne","Australia",3307.625,5031195
-"Mexico City","México",8265.775,17984000
-"Miami","United States",2059.2822,6138333
-"Milan","Italy",3711.844,1354196
-"Moscow","Russia",9310.085,17332000
-"Mumbai","India",27714.459,24973000
-"New Delhi","India",14690.279,33812937
-"New York City","United States",4684.15,8478841
-"Osaka","Japan",5720.6123,15126000
-"Paris","France",6564.662,11060000
-"Rio de Janeiro","Brazil",7668.2437,12592000
-"San Francisco","United States",2923.3884,3364862
-"Seoul","South Korea",9755.343,23016000
-"Shanghai","China",9807.742,24073000
-"Singapore","Singapore",11684.381,5983000
-"Sydney","Australia",4283.172,4840600
-"Taipei","Taiwan",9965.557,2494813
-"Tokyo","Japan",6419.3433,37785000
-"Toronto","Canada",4428.844,5647656
-"Xi'an","China",7668.5845,12328000
+"City","Country","Population_Density","Population","Region"
+"Addis Ababa","Ethiopia",15656.908,5704000,"Sub-Saharan Africa"
+"Amsterdam","Netherlands",4732.953,1477213,"Europe & Central Asia"
+"Bangkok","Thailand",7062.674,18007000,"East Asia & Pacific"
+"Beijing","China",8329.773,18522000,"East Asia & Pacific"
+"Buenos Aires","Argentina",6486.6934,16710000,"Latin America & Caribbean"
+"Cairo","Egypt",15018.051,20296000,"Middle East & North Africa"
+"Chicago","United States",2599.577,8489066,"North America"
+"Chongqing","China",12939.802,12135000,"East Asia & Pacific"
+"Dhaka","Bangladesh",5643.195,19134000,"South Asia"
+"Dubai","United Arab Emirates",5345.9927,3331420,"Middle East & North Africa"
+"Guangzhou","China",6660.63,26940000,"East Asia & Pacific"
+"Hanoi","Vietnam",5368.13,8587100,"East Asia & Pacific"
+"Ho Chi Minh City","Vietnam",9790.067,15136000,"East Asia & Pacific"
+"Hong Kong","China",21852.725,7450022,"East Asia & Pacific"
+"Istanbul","Turkey",11197.969,14441000,"Europe & Central Asia"
+"Jakarta","Indonesia",8787.413,33756000,"East Asia & Pacific"
+"Johannesburg","South Africa",4893.4185,7860781,"Sub-Saharan Africa"
+"Karachi","Pakistan",25217.87,20249000,"South Asia"
+"Khartoum","Sudan",7426.7114,7869000,"Sub-Saharan Africa"
+"Kinshasa","Democratic Republic of the Congo",26582.512,17223982,"Sub-Saharan Africa"
+"Kolkata","India",9393.467,8227533,"South Asia"
+"Kuala Lumpur","Malaysia",6278.5117,8911000,"East Asia & Pacific"
+"Lagos","Nigeria",10713.966,16637000,"Sub-Saharan Africa"
+"Lahore","Pakistan",15929.911,12306000,"South Asia"
+"Lima","Peru",11004.171,10320000,"Latin America & Caribbean"
+"London","United Kingdom",6311.906,11262000,"Europe & Central Asia"
+"Los Angeles","United States",2995.6274,11885717,"North America"
+"Madrid","Spain",4732.953,6211000,"Europe & Central Asia"
+"Manila","Philippines",10145.279,24922000,"East Asia & Pacific"
+"Melbourne","Australia",3307.625,5031195,"East Asia & Pacific"
+"Mexico City","Mexico",8265.775,17984000,"Latin America & Caribbean"
+"Miami","United States",2059.2822,6138333,"North America"
+"Milan","Italy",3711.844,1354196,"Europe & Central Asia"
+"Moscow","Russia",9310.085,17332000,"Europe & Central Asia"
+"Mumbai","India",27714.459,24973000,"South Asia"
+"New Delhi","India",14690.279,33812937,"South Asia"
+"New York City","United States",4684.15,8478841,"North America"
+"Osaka","Japan",5720.6123,15126000,"East Asia & Pacific"
+"Paris","France",6564.662,11060000,"Europe & Central Asia"
+"Rio de Janeiro","Brazil",7668.2437,12592000,"Latin America & Caribbean"
+"San Francisco","United States",2923.3884,3364862,"North America"
+"Seoul","South Korea",9755.343,23016000,"East Asia & Pacific"
+"Shanghai","China",9807.742,24073000,"East Asia & Pacific"
+"Singapore","Singapore",11684.381,5983000,"East Asia & Pacific"
+"Sydney","Australia",4283.172,4840600,"East Asia & Pacific"
+"Taipei","Taiwan",9965.557,2494813,"East Asia & Pacific"
+"Tokyo","Japan",6419.3433,37785000,"East Asia & Pacific"
+"Toronto","Canada",4428.844,5647656,"North America"
+"Xi'an","China",7668.5845,12328000,"East Asia & Pacific"

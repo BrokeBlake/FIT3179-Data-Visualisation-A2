@@ -1,0 +1,83 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 700,
+    "height": 500,
+    "title":
+    {
+        "text": "Global Cities: Population vs Population Density",
+        "fontSize": 20,
+        "anchor": "start"
+    },
+    "config":
+    {
+        "axis":
+        {
+            "labelFontSize": 12,
+            "titleFontSize": 13
+        },
+        "legend":
+        {
+            "titleFontSize": 13,
+            "labelFontSize": 12
+        }
+    },
+    "data":
+        {
+        "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/population_density_2025.csv"
+        },
+    "mark":
+    {
+        "type": "point",
+        "filled": true,
+        "size": 100,
+        "opacity": 0.8
+    },
+    "encoding":
+    {
+        "x":
+        {
+            "field": "Population_Density",
+            "type": "quantitative",
+            "title": "Population Density (people per km²)",
+            "scale":
+            {
+                "type": "log"
+            }
+        },
+        "y":
+        {
+            "field": "Population",
+            "type": "quantitative",
+            "title": "Total Population",
+            "scale":
+            {
+                "type": "log"
+            }
+        },
+        "color":
+        {
+            "field": "Country",
+            "type": "nominal",
+            "title": "Country"
+        },
+        "tooltip":
+        [
+            {
+                "field": "City",
+                "type": "nominal"
+            },
+            {
+                "field": "Country",
+                "type": "nominal"
+            },
+            {
+                "field": "Population_Density",
+                "type": "quantitative"
+            },
+            {
+                "field": "Population",
+                "type": "quantitative"
+            }
+        ]
+    }
+}
