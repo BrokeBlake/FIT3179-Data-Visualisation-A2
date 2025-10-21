@@ -15,3 +15,9 @@ vegaEmbed(
     "#area_chart", vg_3
 
 ).then(function(result){}).catch(console.error);
+
+var vg_4 = "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/vega-lite/city_densities.json";
+vegaEmbed(
+    "#scatter_plot", vg_4
+
+).then(function(result){}).catch(console.error);
