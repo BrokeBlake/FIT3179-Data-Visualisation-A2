@@ -26,7 +26,11 @@
     {
         "type": "mercator",
         "scale": 40000,
-        "center": [145, -37.875]
+        "center":
+        [
+            145,
+            -37.875
+        ]
         
     },
     
@@ -138,7 +142,7 @@
                 "type": "geoshape",
                 "fill": null,
                 "stroke": "lightblue",
-                "strokeWidth": "2"
+                "strokeWidth": 2
             }
         }
     ]

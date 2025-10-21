@@ -98,14 +98,17 @@
         [
             {
                 "field": "year",
+                "title": "Year",
                 "type": "quantitative"
             },
             {
                 "field": "density_bin",
+                "title": "Density",
                 "type": "nominal"
             },
             {
                 "field": "proportion",
+                "title": "Proportion",
                 "type": "quantitative",
                 "format": ".1%"
             }
