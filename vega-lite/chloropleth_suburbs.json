@@ -46,6 +46,18 @@
         {
             "data":
             {
+                "sphere": true
+            },
+            "mark":
+            {
+                "type": "geoshape",
+                "fill": "#e1eaf2",
+                "stroke": "white"
+            }
+        },
+        {
+            "data":
+            {
                 "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/vic_suburb_boundaries_topojson.json",
                 "format":
                 {

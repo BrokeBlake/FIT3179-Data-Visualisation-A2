@@ -49,7 +49,7 @@
             "mark":
             {
                 "type": "geoshape",
-                "fill": "lightblue",
+                "fill": "#e1eaf2",
                 "stroke": "white"
             }
         },
@@ -152,8 +152,45 @@
             {
                 "type": "geoshape",
                 "fill": null,
-                "stroke": "lightblue",
-                "strokeWidth": 2
+                "stroke": "#e1eaf2",
+                "strokeWidth": 3
+            }
+        },
+        {
+            "data":
+            {
+                "values":
+                [
+                    {
+                    "lat": -37.76,
+                    "lon": 145.05,
+                    "label": "Yarra River"
+                    }
+            ]   
+            },
+            "mark":
+            {
+                "type": "text",
+                "fontSize": 14,
+                "color": "black",
+                "angle": 332
+            },
+            "encoding":
+            {
+                "longitude":
+                {
+                    "field": "lon",
+                    "type": "quantitative"
+                },
+                "latitude":
+                {
+                    "field": "lat",
+                    "type": "quantitative"
+                },
+                "text":
+                {
+                    "field": "label"
+                }
             }
         }
     ]
