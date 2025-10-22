@@ -20,6 +20,10 @@
         {
             "titleFontSize": 13,
             "labelFontSize": 12
+        },
+        "view":
+        {
+            "stroke": "transparent"
         }
     },
     "data":
