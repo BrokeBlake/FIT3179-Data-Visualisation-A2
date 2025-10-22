@@ -2,7 +2,7 @@
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"width": 600,
 	"height": 500,
-    "background": "null",
+    "background": "white",
     "title":
     {
         "text": "Melbourne: Population Density by Suburb (1975-2030)",
@@ -38,14 +38,7 @@
     [
         {
             "name": "selectedyear",
-            "value": 2025,
-            "bind": {
-            "input": "range",
-            "min": 1975,
-            "max": 2030,
-            "step": 5,
-            "name": "Choose year: "
-            }
+            "value": 2025
         }
     ],
     "layer":
@@ -85,9 +78,9 @@
             "mark":
             {
                 "type": "geoshape",
-                "stroke": "darkgreen",
-                "strokeWidth": 1,
-                "strokeOpacity": 0.2
+                "stroke": "black",
+                "strokeWidth": 0.25,
+                "strokeOpacity": 0.75
             },
             "encoding":
             {
@@ -105,7 +98,12 @@
                     },
                     "legend": 
                     {
-                        "values": [0, 250, 1000, 2500, 5000, 10000, 19530]
+                        "values": [0, 1000, 5000, 19530],
+                        "orient": "none",
+                        "legendX": 160,
+                        "legendY": 400,
+                        "direction": "horizontal",
+                        "gradientLength": 180
                     }
                 },
                 "tooltip":

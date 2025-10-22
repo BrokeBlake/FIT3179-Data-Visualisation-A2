@@ -33,41 +33,59 @@
         }
         .primary-container
         {
-            display: block;
+            display: flex;
+            flex-direction: column;
             max-width: 1080px;
             margin: 10px auto 40px auto;
-            background-color: green;
-            padding: 2px;
+            background-color: #e0e0e0;
+            padding: 5px;
             border-radius: 5px;
+            gap: 5px;
         }
 
         .horizontal-container
         {
             display: flex;
+            flex-direction: vertical;
             max-width: 1080px;
-            margin: 2px;
-            background-color: blue;
+            background-color: whitesmoke;
             padding: 2px;
             border-radius: 5px;
             gap: 2px;
         }
 
-        .horizontal-small
+        .horizontal-25
         {
             display: block;
-            flex: 40%;
+            flex: 25%;
             margin: 0px;
-            background-color: orange;
             padding: 10px;
             border-radius: 5px;
         }
         
-        .horizontal-large
+        .horizontal-75
         {
             display: block;
-            flex: 60%;
+            flex: 75%;
             margin: 0px;
-            background-color: orange;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .horizontal-40
+        {
+            display: block;
+            flex: 75%;
+            margin: 0px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .horizontal-60
+        {
+            display: block;
+            flex: 75%;
+            margin: 0px;
             padding: 10px;
             border-radius: 5px;
         }
@@ -77,7 +95,6 @@
         {
             flex: 1;
             display: block;
-            background-color: yellow;
             text-align: left;
             font-size: 16px;
             padding: 10px;
@@ -88,7 +105,6 @@
         {
             flex: 1;
             display: block;
-            background-color: yellow;
             text-align: right;
             font-size: 16px;
             padding: 10px;
@@ -99,7 +115,6 @@
         {
             flex: 1;
             display: block;
-            background-color: yellow;
             text-align: center;
             font-size: 16px;
             padding: 10px;
@@ -122,23 +137,55 @@
             
         </div>
         <div class="horizontal-container">
-            <div class="horizontal-large" id= "chloropleth_map"></div>
-            <div class="horizontal-small">
-                <p>
-                <b>Urban Sprawl</b> refers to the widespread, most often unplanned expansion of residential areas
-                at the edges of cities. <b>Melbourne</b>, dubbed
-                the “Doughnut City” in the late 1980s, has witnessed a rapid outward growth over the last half century,
-                reshaping the way people live, work, and move.
+            <div class="horizontal-75" id= "chloropleth_map"></div>
+            <div class="horizontal-25">
+                <div class="left-align-text">
+                    <p>
 
-                <br><br>
-                The impact of urban sprawl remains a highly debated topic among planners, economists, and communities.
-                </p>
+                    <b>Urban Sprawl</b> refers to the widespread, most often unplanned expansion of residential areas
+                    at the edges of cities. <b>Melbourne</b>, dubbed
+                    the “Doughnut City” in the late 1980s, has witnessed a rapid outward growth over the last half century,
+                    reshaping the way people live, work, and move.
+
+                    <br><br>
+                    The impact of urban sprawl remains a highly debated topic among planners, economists, and communities.
+                    Use the graph above to explore the growth and decline of all of Melbourne's suburbs over the previous 50 years.
+                    
+                    </p>
+                </div>
+
+                <div class= "left-align-text" id= "year-control">
+                    <label for="year-slider">
+                        <strong>
+                            Choose year:
+                        </strong>
+                    </label>
+                    <input id="year-slider" type="range" min="1975" max="2030" step="5" value="2025" style="width: 300px;">
+                    <span id="year-value">
+                        2025
+                    </span>
+                </div>
+
             </div>
         </div>
 
         <div class="horizontal-container">
-            <div class="horizontal-small"></div>
-            <div class="horizontal-small"></div>
+            <div class="horizontal-25">
+                <div class="left-align-text">
+                    <p>
+
+                    <span style="color: green;"><b>Supporters</b></span> highlight its role in 
+                    <b>making housing more affordable</b>, providing families with <b>larger homes and backyards</b>, 
+                    and aligning with <b>consumer preferences</b> towards low density living.
+                    <br><br>
+                    <span style="color: red;"><b>Critics</b></span>, on the other hand, point to
+                    <b>increased automobile dependency</b>, <b>inefficient land use</b>, 
+                    and the <b>loss of prime agricultural land</b> as major drawbacks.
+
+                    </p>
+                </div>
+            </div>
+            <div class="horizontal-25"></div>
         </div>
         
     </div>
@@ -146,23 +193,23 @@
 
     <div class="primary-container">
         <div class="horizontal-container">
-            <div class="horizontal-small">
+            <div class="horizontal-40">
                 <div class="centre-align-text">
                     <p>
-                        Text here
-                        <br><br>
-                        And here
+                        Since the early 1990s, the Victorian Government has introduced several <b>urban growth strategies</b>
+                        designed to contain sprawl while promoting <b>inner-city revitalisation</b>. Most famously, the 2001 initiaitive <b>Melbourne 2030</b> sought to curb urban sprawl by introducting urban growth boundaries
+                        , reducing the proportion of low-density housing, and redirecting development into designated "activity centres".
                     </p>
                 </div>
                 <div class="centre-align-text">
                     <p>
-                        Text here
-                        <br><br>
-                        And here
+                        These policies have had a significant impact on revitalising Melbourne's innermost suburbs, as you can see in the above chart.
+                        CBD-adjacent suburbs such as <b>Melbourne</b>, <b>Southbank</b>, and <b>Carlton</b> have seen over 1000% growth in the last 50 years.
+                        The <b>Docklands'</b> population has increased from just 30 residents to over 40 thousand, more than a 100,000% increase.
                     </p>
                 </div>
             </div>
-            <div class="horizontal-large"></div>
+            <div class="horizontal-60" id="point_map"></div>
         </div>
     </div>
 
