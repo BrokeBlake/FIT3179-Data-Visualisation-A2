@@ -146,7 +146,7 @@
         {
             "data":
             {
-                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/vic_rivers.geojson"
+                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/melbourne_rivers.topojson"
             },
             "mark":
             {
