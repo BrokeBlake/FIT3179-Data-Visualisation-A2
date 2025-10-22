@@ -2,7 +2,7 @@
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"width": 600,
 	"height": 500,
-    "background": "white",
+    "background": "null",
     "title":
     {
         "text": "Melbourne: Population Density by Suburb (1975-2030)",

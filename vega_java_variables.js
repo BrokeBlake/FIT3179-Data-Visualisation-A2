@@ -9,24 +9,23 @@ vegaEmbed(
 ).then(function(result){}).catch(console.error);
 
 
-let mapView; // store reference to your map view
+let mapView;
 
-// 1️⃣ Embed your chloropleth map (the one using `selectedyear`)
-vegaEmbed("#chloropleth_map", vg_2, { renderer: 'svg' })
-  .then(function(result) {
-      mapView = result.view;
+vegaEmbed("#chloropleth_map", vg_2, { renderer: 'svg' }
 
-      // 2️⃣ Connect slider input to Vega signal
-      const slider = document.getElementById("year-slider");
-      const label = document.getElementById("year-value");
+).then(function(result)
+    {
+        mapView = result.view;
 
-      slider.addEventListener("input", function() {
-          const val = +this.value;
-          label.textContent = val;
-          mapView.signal("selectedyear", val).run();
-      });
-  })
-  .catch(console.error);
+        const slider = document.getElementById("year-slider");
+        const label = document.getElementById("year-value");
+
+        slider.addEventListener("input", function() {
+            const val = +this.value;
+            label.textContent = val;
+            mapView.signal("selectedyear", val).run();
+        });
+    }).catch(console.error);
 
 vegaEmbed(
     "#area_chart", vg_3, { renderer: 'svg' }

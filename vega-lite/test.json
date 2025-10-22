@@ -114,7 +114,13 @@
                     },
                     "legend":
                     {
-                        "title": "Year considered Developed"
+                        "title": "Year Considered Developed: ",
+                        "orient": "none",
+                        "legendX": 160,
+                        "legendY": 420,
+                        "direction": "horizontal",
+                        "columns": 4,
+                        "gradientLength": 180
                     }
                 },
                 "tooltip":
