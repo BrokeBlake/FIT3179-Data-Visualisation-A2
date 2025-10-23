@@ -20,5 +20,5 @@ def check_github_raw_url(url):
 
 check_github_raw_url("https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/builtup_point_data.csv")
 check_github_raw_url("https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/population_by_suburb.csv")
-check_github_raw_url("https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/vic_suburb_boundaries_topojson.json")
+check_github_raw_url("https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/melbourne_rivers.json")
 check_github_raw_url("https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/population_density_distribution.csv")

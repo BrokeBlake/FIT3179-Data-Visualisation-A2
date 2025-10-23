@@ -146,7 +146,7 @@
         {
             "data":
             {
-                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/melbourne_rivers.topojson"
+                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/vic_rivers.geojson"
             },
             "mark":
             {
@@ -154,6 +154,25 @@
                 "fill": null,
                 "stroke": "#e1eaf2",
                 "strokeWidth": 3
+            }
+        },
+        {
+            "data":
+            {
+                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/melbourne_rivers.json",
+                "format":
+                {
+                    "type": "topojson",
+                    "feature": "Catchments_-_Major_River_Basins_Melbourne"
+                }
+            },
+            
+            "mark":
+            {
+                "type": "geoshape",
+                "fill": null,
+                "stroke": "#e1eaf2",
+                "strokeWidth": 2
             }
         },
         {
