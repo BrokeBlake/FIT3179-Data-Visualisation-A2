@@ -1,0 +1,97 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 700,
+    "height": 600,
+    "background": "white",
+    "title":
+    {
+        "text": "Melbourne: Built-up Land (1975-2030)",
+        "fontSize": 16,
+        "fontWeight": "bold"
+    },
+    "config":
+    {
+        "axis":
+        {
+            "labelFontSize": 12,
+            "titleFontSize": 13
+        },
+        "legend":
+        {
+            "titleFontSize": 13,
+            "labelFontSize": 12
+        },
+        "view":
+        {
+            "stroke": "transparent"
+        }
+    },
+    "data":
+    {
+        "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/suburb_growth.csv",
+        "format":
+        {
+            "type": "csv"
+        }
+    },
+    "mark":
+    {
+        "type": "point",
+        "filled": true,
+        "size": 100
+    },
+    "encoding":
+    {
+        "x":
+        {
+            "field": "nominal_growth",
+            "type": "quantitative",
+            "title": "Nominal Growth",
+            "scale":
+            {
+                "type": "symlog"
+            }
+        },
+        "y":
+        {
+            "field": "pct_growth",
+            "type": "quantitative",
+            "title": "Percentage Growth",
+            "scale":
+            {
+                "type": "symlog"
+            }
+        },
+        "color":
+        {
+            "field": "region_type",
+            "type": "nominal",
+            "title": "Region Type"
+        },
+        "shape":
+        {
+            "field": "region_type",
+            "type": "nominal",
+            "title": "Region Type"
+        },
+        "tooltip":
+        [
+            {
+                "field": "suburb",
+                "type": "nominal"
+            },
+            {
+                "field": "nominal_growth",
+                "type": "quantitative"
+            },
+            {
+                "field": "pct_growth",
+                "type": "quantitative"
+            },
+            {
+                "field": "region_type",
+                "type": "nominal"
+            }
+        ]
+    }
+}
