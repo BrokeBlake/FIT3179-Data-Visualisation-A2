@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 700,
+    "width": 500,
     "height": 600,
     "background": "white",
     "title":
@@ -38,7 +38,7 @@
     {
         "type": "point",
         "filled": true,
-        "size": 100
+        "size": 80
     },
     "encoding":
     {
@@ -49,7 +49,20 @@
             "title": "Nominal Growth",
             "scale":
             {
-                "type": "symlog"
+                "type": "symlog",
+                "constant": 2000,
+                "domain": [-2000, 165000]
+            },
+            "axis":
+            {
+                "values":
+                [
+                    -2000, -800, 0,
+                    800, 2000, 4000,
+                    8000, 16000, 32000, 64000,
+                    128000
+                ],
+                "grid": true
             }
         },
         "y":
@@ -59,38 +72,68 @@
             "title": "Percentage Growth",
             "scale":
             {
-                "type": "symlog"
+                "type": "symlog",
+                "constant": 1.5,
+                "domain": [-10, 155000]
+            },
+            "axis":
+            {
+                "values":
+                [
+                    -10, -5, -2, 0,
+                    2, 5, 10, 20,
+                    50, 100, 200, 500,
+                    1000, 2000, 5000, 10000,
+                    20000, 50000, 100000
+                ],
+                "grid": true
             }
         },
         "color":
         {
             "field": "region_type",
             "type": "nominal",
-            "title": "Region Type"
-        },
-        "shape":
-        {
-            "field": "region_type",
-            "type": "nominal",
-            "title": "Region Type"
+            "title": "Region Type",
+            "legend":
+            {
+                "orient": "none",
+                "legendX": 100,
+                "legendY": 100
+            },
+            "scale":
+            {
+                "domain":
+                [
+                    "Rural",
+                    "Outer Suburban",
+                    "Inner Suburban",
+                    "Urban"
+                ],
+                "scheme": "redyellowblue"
+
+            }
         },
         "tooltip":
         [
             {
                 "field": "suburb",
-                "type": "nominal"
+                "type": "nominal",
+                "title": "Suburb"
             },
             {
                 "field": "nominal_growth",
-                "type": "quantitative"
+                "type": "quantitative",
+                "title": "Total Growth"
             },
             {
                 "field": "pct_growth",
-                "type": "quantitative"
+                "type": "quantitative",
+                "title": "Percent Growth (%)"
             },
             {
                 "field": "region_type",
-                "type": "nominal"
+                "type": "nominal",
+                "title": "Region Type"
             }
         ]
     }
