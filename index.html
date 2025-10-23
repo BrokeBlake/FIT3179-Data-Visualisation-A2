@@ -37,7 +37,7 @@
             flex-direction: column;
             max-width: 1080px;
             margin: 10px auto 40px auto;
-            background-color: #e0e0e0;
+            background-color: #e6e6e6;
             padding: 5px;
             border-radius: 5px;
             gap: 5px;
@@ -48,7 +48,7 @@
             display: flex;
             flex-direction: vertical;
             max-width: 1080px;
-            background-color: whitesmoke;
+            background-color: white;
             padding: 2px;
             border-radius: 5px;
             gap: 2px;
@@ -112,7 +112,7 @@
         <div class="horizontal-container">
             <div class="block-container" style="flex: 70%;" id= "chloropleth_map"></div>
             <div class="block-container" style="flex: 30%;">
-                <div class="left-align-text">
+                <div class="centre-align-text">
                     <p>
 
                     <b>Urban Sprawl</b> refers to the widespread, most often unplanned expansion of residential areas
@@ -127,7 +127,8 @@
                     The impact of urban sprawl remains a highly debated topic among planners, economists, and communities.
                     
                     <br><br>
-                    Use the graph above to explore the growth and decline of all of Melbourne's suburbs over the previous 50 years.
+                    Use the map to the <b>left</b> to explore the population density of every suburb in Melbourne.
+                    Change the <b>"Choose year:"</b> slider below to see how the population of your selected suburb has evolved over time
                     
                     </p>
                 </div>
@@ -173,29 +174,46 @@
 
     <div class="primary-container">
         <div class="horizontal-container">
-            <div class="block-container" style="flex: 60%;">
+            <div class="block-container" style="flex: 40%;">
                 <div class="centre-align-text">
                     <p>
                         Since the early 1990s, the Victorian Government has introduced several <b>urban growth strategies</b>
-                        designed to contain sprawl while promoting <b>inner-city revitalisation</b>. Most famously, the 2001 initiaitive <b>Melbourne 2030</b> sought to curb urban sprawl by introducting urban growth boundaries
-                        , reducing the proportion of low-density housing, and redirecting development into designated "activity centres".
+                        designed to contain sprawl while promoting <b>inner-city revitalisation</b>.
+                        
+                        <br><br>
+                        Most famously, the 2001 initiaitive 
+                        <a href="https://www.planning.vic.gov.au/guides-and-resources/strategies-and-initiatives/melbournes-strategic-planning-history/melbourne-2030-planning-for-sustainable-growth-2002"><b>Melbourne 2030</b></a>
+                        sought to curb urban sprawl by introducting urban growth boundaries,
+                        reducing the proportion of low-density housing, and redirecting development.
                     </p>
                 </div>
                 <div class="centre-align-text">
                     <p>
-                        These policies have had a significant impact on revitalising Melbourne's innermost suburbs, as you can see in the above chart.
+                        These policies have had a significant impact on revitalising Melbourne's innermost suburbs.
                         CBD-adjacent suburbs such as <b>Melbourne</b>, <b>Southbank</b>, and <b>Carlton</b> have seen over 1000% growth in the last 50 years.
                         The <b>Docklands'</b> population has increased from just 30 residents to over 40 thousand, more than a 100,000% increase.
                     </p>
                 </div>
             </div>
-            <div class="block-container" style="flex: 60%;" id="point_map"></div>
+            <div class="block-container" style="flex: 60%;"></div>
         </div>
     </div>
 
 
     <div class="primary-container">
+        <div class="horizontal-container">
+            <div class="block-container"> 
 
+            </div>
+        </div>
+
+        <div class="horizontal-container">
+            <div class="block-container" style="flex: 35%;"> 
+
+
+            </div>
+            <div class="block-container" style="flex: 65%;" id="point_map"></div>
+        </div>
     </div>
 
 

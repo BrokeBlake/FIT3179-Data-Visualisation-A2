@@ -30,7 +30,7 @@
     "projection":
     {
         "type": "mercator",
-        "scale": 36000,
+        "scale": 38000,
         "center": [145, -37.875]
         
     },
@@ -112,8 +112,8 @@
                     {
                         "values": [0, 1000, 5000, 19530],
                         "orient": "none",
-                        "legendX": 160,
-                        "legendY": 400,
+                        "legendX": 200,
+                        "legendY": 475,
                         "direction": "horizontal",
                         "gradientLength": 180
                     }
