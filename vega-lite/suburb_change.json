@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 500,
     "height": 600,
-    "background": "white",
+    "background": "null",
     "title":
     {
         "text": "Melbourne: Built-up Land (1975-2030)",
@@ -109,7 +109,7 @@
                     "Inner Suburban",
                     "Urban"
                 ],
-                "scheme": "redyellowblue"
+                "range": ["#ff0000", "#ffb300", "#63cce0", "#0000ff"]
 
             }
         },
@@ -123,7 +123,7 @@
             {
                 "field": "nominal_growth",
                 "type": "quantitative",
-                "title": "Total Growth"
+                "title": "Total Growth (#)"
             },
             {
                 "field": "pct_growth",
