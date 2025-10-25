@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 550,
     "height": 500,
-    "background": "null",
+    "background": "white",
     "title":
     {
         "text": "Global Cities: Population Density",
@@ -90,16 +90,21 @@
                     "field": "Region",
                     "type": "nominal",
                     "title": "Region",
-                "legend":
-                {
-                    "orient": "none",
-                    "legendX": 200,
-                    "legendY": 331,
-                    "strokeColor": "#ccc",
-                    "fillColor": "white",
-                    "cornerRadius": 10,
-                    "padding": 10
-                }
+                    "scale":
+                    {
+                        "domain": ["East Asia & Pacific", "Europe & Central Asia", "Latin America & Caribbean", "Middle East & North Africa", "North America", "South Asia", "Sub-Saharan Africa"],
+                        "range": ["#4E79A7", "#F28E2B", "#76B7B2", "#59A14F", "#B07AA1", "#EDC948", "#9C755F"]
+                    },
+                    "legend":
+                    {
+                        "orient": "none",
+                        "legendX": 340,
+                        "legendY": 320,
+                        "strokeColor": "#ccc",
+                        "fillColor": "white",
+                        "cornerRadius": 10,
+                        "padding": 10
+                    }
                 },
                 "tooltip":
                 [
