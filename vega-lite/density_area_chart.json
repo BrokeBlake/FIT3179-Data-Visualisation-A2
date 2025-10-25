@@ -5,7 +5,7 @@
     "background": "white",
     "title":
     {
-        "text": "Melbourne: Population Density Distribution by Class (1975-2030)",
+        "text": "Melbourne: Population Density Distribution by Class (1975 - 2030)",
         "fontSize": 16,
         "fontWeight": "bold"
     },
@@ -95,10 +95,12 @@
                 },
                 "reverse": true
             },
-            "legend":
+            "legend": 
             {
-                "title": "Density (pp/km²)",
-                "orient": "right"
+                "title": "Density (people/km²)",
+                "orient": "bottom",
+                "legendX": 200,
+                "legendY": 50
             }
         },
         "order":
