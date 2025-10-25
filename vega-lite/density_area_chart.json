@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 600,
     "height": 400,
-    "background": "white",
+    "background": "null",
     "title":
     {
         "text": "Melbourne: Population Density Distribution by Class (1975 - 2030)",

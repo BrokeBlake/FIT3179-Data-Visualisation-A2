@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 550,
     "height": 500,
-    "background": "white",
+    "background": "null",
     "title":
     {
         "text": "Global Cities: Population Density",

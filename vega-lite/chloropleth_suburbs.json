@@ -58,7 +58,8 @@
             {
                 "type": "geoshape",
                 "fill": "#e1eaf2",
-                "stroke": "white"
+                "stroke": "white",
+                "opacity": 0.8
             }
         },
         {
