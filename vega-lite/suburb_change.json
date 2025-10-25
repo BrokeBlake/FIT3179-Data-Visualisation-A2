@@ -36,6 +36,18 @@
     "layer":
     [
         {
+            "params":
+            [
+                {
+                    "name": "region_select",
+                    "select":
+                    {
+                        "type": "point",
+                        "fields": ["region_type"],
+                        "toggle": true
+                    }
+                }
+            ],
             "data":
             {
                 "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/suburb_growth.csv",
@@ -149,7 +161,16 @@
                         "type": "nominal",
                         "title": "Region Type"
                     }
-                ]
+                ],
+                "opacity":
+                {
+                    "condition":
+                    {
+                        "param": "region_select",
+                        "value": 1
+                    },
+                    "value": 0.15
+                }
             }
         },
             {
