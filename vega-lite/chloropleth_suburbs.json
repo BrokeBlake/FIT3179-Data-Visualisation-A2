@@ -14,7 +14,7 @@
     {
         "axis":
         {
-            "labelFontSize": 13,
+            "labelFontSize": 14,
             "titleFontSize": 14,
             "labelFont": "Calibri",
             "titleFont": "Calibri",
@@ -22,7 +22,7 @@
         },
         "legend":
         {
-            "labelFontSize": 13,
+            "labelFontSize": 14,
             "titleFontSize": 14,
             "labelFont": "Calibri",
             "titleFont": "Calibri",
