@@ -163,15 +163,15 @@
             "transform":
             [
                 {
-                    "filter": "indexof(['Docklands', 'Point Cook', 'Cranbourne East', 'Melbourne', 'Southbank', 'Carlton', 'Mitcham', 'Clayton', 'Pakenham'], datum.suburb) >= 0"
+                    "filter": "indexof(['Docklands', 'Point Cook', 'Cranbourne East', 'Melbourne', 'Southbank', 'Carlton', 'Mitcham', 'Clayton', 'Pakenham', 'Greensborough', 'Frankston'], datum.suburb) >= 0"
                 }
             ],
             "mark": {
                 "type": "text",
                 "align": "right",
                 "baseline": "middle",
-                "dx": -5,
-                "dy": -5,
+                "dx": -7,
+                "dy": -7,
                 "fontSize": 13,
                 "font": "Calibri",
                 "color": "black"
@@ -194,6 +194,43 @@
                     "type": "nominal"
                 }
             }
+        },
+        {
+            "data":
+            {
+                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/suburb_growth.csv",
+                "format":
+                {
+                    "type": "csv"
+                }
+            },
+            "transform":
+            [
+                {
+                "filter": "indexof(['Docklands', 'Point Cook', 'Cranbourne East', 'Melbourne', 'Southbank', 'Carlton', 'Mitcham', 'Clayton', 'Pakenham', 'Greensborough', 'Frankston'], datum.suburb) >= 0"
+                }
+            ],
+            "mark":
+            {
+                "type": "point",
+                "filled": false,
+                "size": 95,
+                "stroke": "black",
+                "strokeWidth": 0.7
+            },
+            "encoding":
+            {
+                "x":
+                {
+                    "field": "nominal_growth",
+                    "type": "quantitative"
+                },
+                "y":
+                {
+                    "field": "pct_growth",
+                    "type": "quantitative"
+                }
             }
+        }
     ]
 }

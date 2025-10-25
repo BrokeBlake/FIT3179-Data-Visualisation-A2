@@ -305,45 +305,7 @@
                 "values":
                 [
                     {
-                    "lat": -38.06,
-                    "lon": 145.32,
-                    "label": "Narre Warren South"
-                    }
-            ]   
-            },
-            "mark":
-            {
-                "type": "text",
-                "fontSize": 14,
-                "font": "Calibri",
-                "fontWeight": "bold",
-                "color": "black"
-            },
-            "encoding":
-            {
-                "longitude":
-                {
-                    "field": "lon",
-                    "type": "quantitative"
-                },
-                "latitude":
-                {
-                    "field": "lat",
-                    "type": "quantitative"
-                },
-                "text":
-                {
-                    "field": "label"
-                }
-            }
-        },
-        {
-            "data":
-            {
-                "values":
-                [
-                    {
-                    "lat": -38.08,
+                    "lat": -38.10,
                     "lon": 145.44,
                     "label": "Pakenham"
                     }
