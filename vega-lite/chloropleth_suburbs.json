@@ -106,7 +106,7 @@
                 {
                     "field": "pop_density",
                     "type": "quantitative",
-                    "title": "Density (pp/km²)",
+                    "title": "Density (people/km²)",
                     "scale":
                     {
                         "type": "sqrt",

@@ -222,6 +222,158 @@
                     "field": "label"
                 }
             }
+        },
+        {
+            "data":
+            {
+                "values":
+                [
+                    {
+                    "lat": -37.89,
+                    "lon": 144.76,
+                    "label": "Point Cook"
+                    }
+            ]   
+            },
+            "mark":
+            {
+                "type": "text",
+                "fontSize": 14,
+                "font": "Calibri",
+                "fontWeight": "bold",
+                "color": "black"
+            },
+            "encoding":
+            {
+                "longitude":
+                {
+                    "field": "lon",
+                    "type": "quantitative"
+                },
+                "latitude":
+                {
+                    "field": "lat",
+                    "type": "quantitative"
+                },
+                "text":
+                {
+                    "field": "label"
+                }
+            }
+        },
+        {
+            "data":
+            {
+                "values":
+                [
+                    {
+                    "lat": -37.84,
+                    "lon": 144.69,
+                    "label": "Tarneit"
+                    }
+            ]   
+            },
+            "mark":
+            {
+                "type": "text",
+                "fontSize": 14,
+                "font": "Calibri",
+                "fontWeight": "bold",
+                "color": "black"
+            },
+            "encoding":
+            {
+                "longitude":
+                {
+                    "field": "lon",
+                    "type": "quantitative"
+                },
+                "latitude":
+                {
+                    "field": "lat",
+                    "type": "quantitative"
+                },
+                "text":
+                {
+                    "field": "label"
+                }
+            }
+        },
+        {
+            "data":
+            {
+                "values":
+                [
+                    {
+                    "lat": -38.06,
+                    "lon": 145.32,
+                    "label": "Narre Warren South"
+                    }
+            ]   
+            },
+            "mark":
+            {
+                "type": "text",
+                "fontSize": 14,
+                "font": "Calibri",
+                "fontWeight": "bold",
+                "color": "black"
+            },
+            "encoding":
+            {
+                "longitude":
+                {
+                    "field": "lon",
+                    "type": "quantitative"
+                },
+                "latitude":
+                {
+                    "field": "lat",
+                    "type": "quantitative"
+                },
+                "text":
+                {
+                    "field": "label"
+                }
+            }
+        },
+        {
+            "data":
+            {
+                "values":
+                [
+                    {
+                    "lat": -38.08,
+                    "lon": 145.44,
+                    "label": "Pakenham"
+                    }
+            ]   
+            },
+            "mark":
+            {
+                "type": "text",
+                "fontSize": 14,
+                "font": "Calibri",
+                "fontWeight": "bold",
+                "color": "black"
+            },
+            "encoding":
+            {
+                "longitude":
+                {
+                    "field": "lon",
+                    "type": "quantitative"
+                },
+                "latitude":
+                {
+                    "field": "lat",
+                    "type": "quantitative"
+                },
+                "text":
+                {
+                    "field": "label"
+                }
+            }
         }
     ]
 }
