@@ -44,7 +44,9 @@
                     {
                         "type": "point",
                         "fields": ["region_type"],
-                        "toggle": true
+                        "on": "click",
+                        "clear": "false",
+                        "toggle": "true"
                     }
                 }
             ],
@@ -118,7 +120,7 @@
                     "legend":
                     {
                         "orient": "none",
-                        "legendX": 100,
+                        "legendX": 80,
                         "legendY": 100,
                         "strokeColor": "#ccc",
                         "fillColor": "white",
@@ -169,7 +171,7 @@
                         "param": "region_select",
                         "value": 1
                     },
-                    "value": 0.15
+                    "value": 0.25
                 }
             }
         },

@@ -47,6 +47,20 @@
     
     [
         {
+            "params":
+            [
+                {
+                    "name": "region_select",
+                    "select":
+                    {
+                        "type": "point",
+                        "fields": ["Region"],
+                        "on": "click",
+                        "clear": "false",
+                        "toggle": "true"
+                    }
+                }
+            ],
             "transform":
             [
                 {
@@ -133,7 +147,16 @@
                         "title": "Total Population",
                         "format": ",.0f"
                     }
-                ]
+                ],
+                "opacity":
+                {
+                    "condition":
+                    {
+                        "param": "region_select",
+                        "value": 1
+                    },
+                    "value": 0.3
+                }
             }
         },
         {
