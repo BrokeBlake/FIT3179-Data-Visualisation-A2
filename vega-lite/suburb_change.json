@@ -37,13 +37,6 @@
                     "type": "csv"
                 }
             },
-            "transform":
-            [
-                {
-                    "calculate": "datum.nominal_growth < 0 ? 0.1 : datum.nominal_growth",
-                    "as": "nominal_growth_pos"
-                }
-            ],
             "mark":
             {
                 "type": "point",
@@ -54,14 +47,14 @@
             {
                 "x":
                 {
-                    "field": "nominal_growth_pos",
+                    "field": "nominal_growth",
                     "type": "quantitative",
-                    "title": "Nominal Growth",
+                    "title": "Nominal Growth (#)",
                     "scale":
                     {
                         "type": "symlog",
                         "constant": 1000,
-                        "domain": [-2000, 165000]
+                        "domain": [0, 165000]
                     },
                     "axis":
                     {
@@ -79,12 +72,12 @@
                 {
                     "field": "pct_growth",
                     "type": "quantitative",
-                    "title": "Percentage Growth",
+                    "title": "Percentage Growth (%)",
                     "scale":
                     {
                         "type": "symlog",
                         "constant": 1.5,
-                        "domain": [-10, 155000]
+                        "domain": [0, 155000]
                     },
                     "axis":
                     {
