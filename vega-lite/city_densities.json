@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 700,
-    "height": 750,
+    "height": 700,
     "background": "white",
     "title":
     {
@@ -39,6 +39,12 @@
     
     [
         {
+            "transform":
+            [
+                {
+                    "filter": "indexof(['Mumbai','Kinshasa','Hong Kong','New Delhi','Singapore','Istanbul','Shanghai','Moscow','Jakarta','Beijing','Mexico City','Paris','Tokyo','London','Osaka','Dhaka', 'Sydney', 'Melbourne', 'Chicago', 'New York City', 'Chongqing', 'Toronto', 'Los Angeles', 'Dubai', 'Amsterdam', 'Cairo', 'Johannesburg'], datum.City) >= 0"
+                }
+            ],
             "mark":
             {
                 "type": "bar"
@@ -53,7 +59,7 @@
                     "scale":
                     {
                         "type": "linear",
-                        "domain": [0, 30000]
+                        "domain": [0, 32000]
                     }
                 },
                 "y":
@@ -111,7 +117,7 @@
             "transform":
             [
                 {
-                    "filter": "datum.City == 'Mumbai' && datum.City == 'Kinshasa' && datum.City == 'Hong Kong' && datum.City == 'New Delhi' && datum.City == 'Singapore' && datum.City == 'Istanbul' && datum.City == 'Shanghai' && datum.City == 'Moscow' && datum.City == 'Jakarta' && datum.City == 'Beijing' && datum.City == 'Mexico City' && datum.City == 'Paris' && datum.City == Tokyo' && datum.City == 'London' && datum.City == 'Osaka' && datum.City == 'Dhaka'"
+                    "filter": "indexof(['Mumbai','Kinshasa','Hong Kong','New Delhi','Singapore','Istanbul','Shanghai','Moscow','Jakarta','Beijing','Mexico City','Paris','Tokyo','London','Osaka','Dhaka', 'Sydney', 'Melbourne', 'Chicago', 'New York City', 'Chongqing', 'Toronto', 'Los Angeles', 'Dubai', 'Amsterdam', 'Cairo', 'Johannesburg'], datum.City) >= 0"
                 }
             ],
             "mark":
