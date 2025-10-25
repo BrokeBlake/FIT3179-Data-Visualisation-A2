@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 550,
     "height": 600,
-    "background": "white",
+    "background": "null",
     "title":
     {
         "text": "Melbourne: Population Growth by Suburb (1975 - 2025)",
@@ -70,7 +70,7 @@
                             0,
                             500, 1000, 2000, 4000,
                             8000, 16000, 32000, 64000,
-                            144591
+                            128000, 144591
                         ],
                         "grid": true    
                     }
