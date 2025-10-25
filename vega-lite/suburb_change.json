@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 550,
     "height": 600,
-    "background": "null",
+    "background": "white",
     "title":
     {
         "text": "Melbourne: Population Growth by Suburb (1975 - 2025)",
@@ -67,10 +67,10 @@
                     {
                         "values":
                         [
-                            -2000, -800, 0,
-                            800, 2000, 4000,
+                            0,
+                            500, 1000, 2000, 4000,
                             8000, 16000, 32000, 64000,
-                            128000
+                            144591
                         ],
                         "grid": true    
                     }
@@ -90,11 +90,10 @@
                     {
                         "values":
                         [
-                            -10, -5, -2, 0,
-                            2, 5, 10, 20,
-                            50, 100, 200, 500,
-                            1000, 2000, 5000, 10000,
-                            20000, 50000, 100000
+                            0, 5, 20,
+                            100, 500,
+                            2000, 10000,
+                            50000, 112467
                         ],
                         "grid": true
                     }
@@ -172,8 +171,8 @@
                 "align": "right",
                 "baseline": "middle",
                 "dx": -7,
-                "dy": -7,
-                "fontSize": 13,
+                "dy": -5,
+                "fontSize": 14,
                 "font": "Calibri",
                 "color": "black"
             },
@@ -230,7 +229,31 @@
                 {
                     "field": "pct_growth",
                     "type": "quantitative"
-                }
+                },
+                "tooltip":
+                [
+                    {
+                        "field": "suburb",
+                        "type": "nominal",
+                        "title": "Suburb"
+                    },
+                    {
+                        "field": "nominal_growth",
+                        "type": "quantitative",
+                        "title": "Total Growth (#)"
+                    },
+                    {
+                        "field": "pct_growth",
+                        "type": "quantitative",
+                        "title": "Percent Growth (%)",
+                        "format": ".2f"
+                    },
+                    {
+                        "field": "region_type",
+                        "type": "nominal",
+                        "title": "Region Type"
+                    }
+                ]
             }
         }
     ]

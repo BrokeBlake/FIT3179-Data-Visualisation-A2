@@ -50,7 +50,7 @@
             "transform":
             [
                 {
-                    "filter": "indexof(['Mumbai','Kinshasa','Hong Kong','New Delhi','Singapore','Istanbul','Shanghai','Moscow','Jakarta','Beijing','Mexico City','Paris','Tokyo','London','Osaka','Dhaka', 'Sydney', 'Melbourne', 'Chicago', 'New York City', 'Chongqing', 'Toronto', 'Los Angeles', 'Dubai', 'Amsterdam', 'Cairo', 'Johannesburg'], datum.City) >= 0"
+                    "filter": "indexof(['Mumbai','Kinshasa','Hong Kong','New Delhi','Singapore','Istanbul','Shanghai','Moscow','Jakarta','Beijing','Mexico City','Paris','Tokyo','London','Osaka','Dhaka', 'Sydney', 'Melbourne', 'Chicago', 'New York City', 'Chongqing', 'Toronto', 'Los Angeles', 'Dubai', 'Amsterdam', 'Cairo', 'Johannesburg', 'Miami'], datum.City) >= 0"
                 }
             ],
             "mark":
@@ -140,7 +140,7 @@
             "transform":
             [
                 {
-                    "filter": "indexof(['Mumbai','Kinshasa','Hong Kong','New Delhi','Singapore','Istanbul','Shanghai','Moscow','Jakarta','Beijing','Mexico City','Paris','Tokyo','London','Osaka','Dhaka', 'Sydney', 'Melbourne', 'Chicago', 'New York City', 'Chongqing', 'Toronto', 'Los Angeles', 'Dubai', 'Amsterdam', 'Cairo', 'Johannesburg'], datum.City) >= 0"
+                    "filter": "indexof(['Mumbai','Kinshasa','Hong Kong','New Delhi','Singapore','Istanbul','Shanghai','Moscow','Jakarta','Beijing','Mexico City','Paris','Tokyo','London','Osaka','Dhaka', 'Sydney', 'Melbourne', 'Chicago', 'New York City', 'Chongqing', 'Toronto', 'Los Angeles', 'Dubai', 'Amsterdam', 'Cairo', 'Johannesburg', 'Miami'], datum.City) >= 0"
                 }
             ],
             "mark":
