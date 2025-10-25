@@ -159,7 +159,7 @@
             "transform":
             [
                 {
-                    "filter": "indexof(['Docklands', 'Point Cook', 'Tarneit', 'Melbourne', 'Southbank', 'Carlton', 'Mitcham', 'Clayton', 'Pakenham'], datum.suburb) >= 0"
+                    "filter": "indexof(['Docklands', 'Point Cook', 'Cranbourne East', 'Melbourne', 'Southbank', 'Carlton', 'Mitcham', 'Clayton', 'Pakenham'], datum.suburb) >= 0"
                 }
             ],
             "mark": {

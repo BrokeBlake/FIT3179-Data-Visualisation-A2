@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 600,
     "height": 400,
-    "background": "null",
+    "background": "white",
     "title":
     {
         "text": "Melbourne: Population Density Distribution by Class (1975-2030)",
@@ -13,13 +13,19 @@
     {
         "axis":
         {
-            "labelFontSize": 12,
-            "titleFontSize": 13
+            "labelFontSize": 13,
+            "titleFontSize": 14,
+            "labelFont": "Calibri",
+            "titleFont": "Calibri",
+            "titleFontWeight": "bold"
         },
         "legend":
         {
-            "titleFontSize": 13,
-            "labelFontSize": 12
+            "labelFontSize": 13,
+            "titleFontSize": 14,
+            "labelFont": "Calibri",
+            "titleFont": "Calibri",
+            "titleFontWeight": "bold"
         },
         "view":
         {
@@ -65,7 +71,7 @@
             "field": "proportion",
             "stack": "normalize",
             "type": "quantitative",
-            "title": "Proportion of Total Area",
+            "title": "Proportion of Population",
             "axis":
             {
                 "format": ".0%"
@@ -85,8 +91,9 @@
                 ],
                 "scheme":
                 {
-                    "name": "viridis"
-                }
+                    "name": "lighttealblue"
+                },
+                "reverse": true
             },
             "legend":
             {
