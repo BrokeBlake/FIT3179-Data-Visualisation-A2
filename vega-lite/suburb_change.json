@@ -1,12 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
+    "width": 550,
     "height": 600,
     "background": "null",
     "title":
     {
         "text": "Melbourne: Population Growth by Suburb (1975 - 2025)",
-        "fontSize": 16,
+        "fontSize": 20,
+        "font": "Calibri",
         "fontWeight": "bold"
     },
     "config":

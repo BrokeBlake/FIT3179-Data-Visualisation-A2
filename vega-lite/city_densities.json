@@ -7,7 +7,9 @@
     {
         "text": "Global Cities: Population Density",
         "fontSize": 20,
-        "anchor": "start"
+        "font": "Calibri",
+        "fontWeight": "bold"
+
     },
     "config":
     {

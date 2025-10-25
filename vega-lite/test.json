@@ -6,7 +6,8 @@
     "title":
     {
         "text": "Melbourne: Built-up Land (1975 - 2030)",
-        "fontSize": 16,
+        "fontSize": 20,
+        "font": "Calibri",
         "fontWeight": "bold"
     },
     "config":
