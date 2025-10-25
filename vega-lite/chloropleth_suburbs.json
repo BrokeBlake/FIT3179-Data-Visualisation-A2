@@ -13,13 +13,19 @@
     {
         "axis":
         {
-            "labelFontSize": 12,
-            "titleFontSize": 13
+            "labelFontSize": 13,
+            "titleFontSize": 14,
+            "labelFont": "Calibri",
+            "titleFont": "Calibri",
+            "titleFontWeight": "bold"
         },
         "legend":
         {
-            "titleFontSize": 13,
-            "labelFontSize": 12
+            "labelFontSize": 13,
+            "titleFontSize": 14,
+            "labelFont": "Calibri",
+            "titleFont": "Calibri",
+            "titleFontWeight": "bold"
         },
         "view":
         {
@@ -164,6 +170,8 @@
             {
                 "type": "text",
                 "fontSize": 14,
+                "font": "Calibri",
+                "fontWeight": "bold",
                 "color": "darkgreen"
             },
             "encoding":
@@ -322,6 +330,8 @@
             {
                 "type": "text",
                 "fontSize": 14,
+                "font": "Calibri",
+                "fontWeight": "bold",
                 "color": "yellow"
             },
             "encoding":
@@ -363,10 +373,24 @@
             },
             "encoding":
             {
-                "longitude": {"field": "lat1","type": "quantitative"},
-                "latitude": {"field": "lon1","type": "quantitative"},
-                "longitude2": {"field": "lat2"},
-                "latitude2": {"field": "lon2"}
+                "longitude":
+                {
+                    "field": "lat1",
+                    "type": "quantitative"
+                },
+                "latitude":
+                {
+                    "field": "lon1",
+                    "type": "quantitative"
+                },
+                "longitude2":
+                {
+                    "field": "lat2"
+                },
+                "latitude2":
+                {
+                    "field": "lon2"
+                }
             }
         }
     ]

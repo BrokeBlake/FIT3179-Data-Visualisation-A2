@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 500,
+    "width": 600,
     "height": 600,
     "background": "white",
     "title":
@@ -13,13 +13,19 @@
     {
         "axis":
         {
-            "labelFontSize": 12,
-            "titleFontSize": 13
+            "labelFontSize": 13,
+            "titleFontSize": 14,
+            "labelFont": "Calibri",
+            "titleFont": "Calibri",
+            "titleFontWeight": "bold"
         },
         "legend":
         {
-            "titleFontSize": 13,
-            "labelFontSize": 12
+            "titleFontSize": 14,
+            "labelFontSize": 13,
+            "labelFont": "Calibri",
+            "titleFont": "Calibri",
+            "titleFontWeight": "bold"
         },
         "view":
         {
@@ -131,7 +137,8 @@
                     {
                         "field": "pct_growth",
                         "type": "quantitative",
-                        "title": "Percent Growth (%)"
+                        "title": "Percent Growth (%)",
+                        "format": ".2f"
                     },
                     {
                         "field": "region_type",
@@ -144,25 +151,44 @@
             {
             "data": {
                 "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/suburb_growth.csv",
-                "format": {"type": "csv"}
+                "format":
+                {
+                    "type": "csv"
+                }
             },
-            "transform": [
-                {"filter": "datum.suburb === 'Docklands'"}
+            "transform":
+            [
+                {
+                    "filter": "indexof(['Docklands', 'Point Cook', 'Tarneit', 'Melbourne', 'Southbank', 'Carlton', 'Mitcham', 'Clayton', 'Pakenham'], datum.suburb) >= 0"
+                }
             ],
             "mark": {
                 "type": "text",
-                "align": "left",
+                "align": "right",
                 "baseline": "middle",
-                "dx": 10,
-                "dy": 0,
-                "fontWeight": "bold",
-                "fontSize": 14,
+                "dx": -5,
+                "dy": -5,
+                "fontSize": 13,
+                "font": "Calibri",
                 "color": "black"
             },
-            "encoding": {
-                "x": {"field": "nominal_growth", "type": "quantitative"},
-                "y": {"field": "pct_growth", "type": "quantitative"},
-                "text": {"field": "suburb", "type": "nominal"}
+            "encoding":
+            {
+                "x":
+                {
+                    "field": "nominal_growth",
+                    "type": "quantitative"
+                },
+                "y":
+                {
+                    "field": "pct_growth",
+                    "type": "quantitative"
+                },
+                "text":
+                {
+                    "field": "suburb",
+                    "type": "nominal"
+                }
             }
             }
     ]

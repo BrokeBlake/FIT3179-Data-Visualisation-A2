@@ -13,13 +13,19 @@
     {
         "axis":
         {
-            "labelFontSize": 12,
-            "titleFontSize": 13
+            "labelFontSize": 13,
+            "titleFontSize": 14,
+            "labelFont": "Calibri",
+            "titleFont": "Calibri",
+            "titleFontWeight": "bold"
         },
         "legend":
         {
-            "titleFontSize": 13,
-            "labelFontSize": 12
+            "labelFontSize": 13,
+            "titleFontSize": 14,
+            "labelFont": "Calibri",
+            "titleFont": "Calibri",
+            "titleFontWeight": "bold"
         },
         "view":
         {
