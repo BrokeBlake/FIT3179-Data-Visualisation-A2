@@ -2,10 +2,10 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 500,
     "height": 600,
-    "background": "null",
+    "background": "white",
     "title":
     {
-        "text": "Melbourne: Built-up Land (1975-2030)",
+        "text": "Melbourne: Population Growth by Suburb (1975 - 2025)",
         "fontSize": 16,
         "fontWeight": "bold"
     },
@@ -26,115 +26,144 @@
             "stroke": "transparent"
         }
     },
-    "data":
-    {
-        "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/suburb_growth.csv",
-        "format":
+    "layer":
+    [
         {
-            "type": "csv"
-        }
-    },
-    "mark":
-    {
-        "type": "point",
-        "filled": true,
-        "size": 80
-    },
-    "encoding":
-    {
-        "x":
-        {
-            "field": "nominal_growth",
-            "type": "quantitative",
-            "title": "Nominal Growth",
-            "scale":
+            "data":
             {
-                "type": "symlog",
-                "constant": 2000,
-                "domain": [-2000, 165000]
+                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/suburb_growth.csv",
+                "format":
+                {
+                    "type": "csv"
+                }
             },
-            "axis":
+            "mark":
             {
-                "values":
-                [
-                    -2000, -800, 0,
-                    800, 2000, 4000,
-                    8000, 16000, 32000, 64000,
-                    128000
-                ],
-                "grid": true
-            }
-        },
-        "y":
-        {
-            "field": "pct_growth",
-            "type": "quantitative",
-            "title": "Percentage Growth",
-            "scale":
-            {
-                "type": "symlog",
-                "constant": 1.5,
-                "domain": [-10, 155000]
+                "type": "point",
+                "filled": true,
+                "size": 80
             },
-            "axis":
+            "encoding":
             {
-                "values":
-                [
-                    -10, -5, -2, 0,
-                    2, 5, 10, 20,
-                    50, 100, 200, 500,
-                    1000, 2000, 5000, 10000,
-                    20000, 50000, 100000
-                ],
-                "grid": true
-            }
-        },
-        "color":
-        {
-            "field": "region_type",
-            "type": "nominal",
-            "title": "Region Type",
-            "legend":
-            {
-                "orient": "none",
-                "legendX": 100,
-                "legendY": 100
-            },
-            "scale":
-            {
-                "domain":
-                [
-                    "Rural",
-                    "Outer Suburban",
-                    "Inner Suburban",
-                    "Urban"
-                ],
-                "range": ["#ff0000", "#ffb300", "#63cce0", "#0000ff"]
+                "x":
+                {
+                    "field": "nominal_growth",
+                    "type": "quantitative",
+                    "title": "Nominal Growth",
+                    "scale":
+                    {
+                        "type": "symlog",
+                        "constant": 2000,
+                        "domain": [-2000, 165000]
+                    },
+                    "axis":
+                    {
+                        "values":
+                        [
+                            -2000, -800, 0,
+                            800, 2000, 4000,
+                            8000, 16000, 32000, 64000,
+                            128000
+                        ],
+                        "grid": true
+                    }
+                },
+                "y":
+                {
+                    "field": "pct_growth",
+                    "type": "quantitative",
+                    "title": "Percentage Growth",
+                    "scale":
+                    {
+                        "type": "symlog",
+                        "constant": 1.5,
+                        "domain": [-10, 155000]
+                    },
+                    "axis":
+                    {
+                        "values":
+                        [
+                            -10, -5, -2, 0,
+                            2, 5, 10, 20,
+                            50, 100, 200, 500,
+                            1000, 2000, 5000, 10000,
+                            20000, 50000, 100000
+                        ],
+                        "grid": true
+                    }
+                },
+                "color":
+                {
+                    "field": "region_type",
+                    "type": "nominal",
+                    "title": "Region Type",
+                    "legend":
+                    {
+                        "orient": "none",
+                        "legendX": 100,
+                        "legendY": 100
+                    },
+                    "scale":
+                    {
+                        "domain":
+                        [
+                            "Rural",
+                            "Outer Suburban",
+                            "Inner Suburban",
+                            "Urban"
+                        ],
+                        "range": ["#ff0000", "#ffb300", "#63cce0", "#0000ff"]
 
+                    }
+                },
+                "tooltip":
+                [
+                    {
+                        "field": "suburb",
+                        "type": "nominal",
+                        "title": "Suburb"
+                    },
+                    {
+                        "field": "nominal_growth",
+                        "type": "quantitative",
+                        "title": "Total Growth (#)"
+                    },
+                    {
+                        "field": "pct_growth",
+                        "type": "quantitative",
+                        "title": "Percent Growth (%)"
+                    },
+                    {
+                        "field": "region_type",
+                        "type": "nominal",
+                        "title": "Region Type"
+                    }
+                ]
             }
         },
-        "tooltip":
-        [
             {
-                "field": "suburb",
-                "type": "nominal",
-                "title": "Suburb"
+            "data": {
+                "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/suburb_growth.csv",
+                "format": {"type": "csv"}
             },
-            {
-                "field": "nominal_growth",
-                "type": "quantitative",
-                "title": "Total Growth (#)"
+            "transform": [
+                {"filter": "datum.suburb === 'Docklands'"}
+            ],
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "middle",
+                "dx": 10,
+                "dy": 0,
+                "fontWeight": "bold",
+                "fontSize": 14,
+                "color": "black"
             },
-            {
-                "field": "pct_growth",
-                "type": "quantitative",
-                "title": "Percent Growth (%)"
-            },
-            {
-                "field": "region_type",
-                "type": "nominal",
-                "title": "Region Type"
+            "encoding": {
+                "x": {"field": "nominal_growth", "type": "quantitative"},
+                "y": {"field": "pct_growth", "type": "quantitative"},
+                "text": {"field": "suburb", "type": "nominal"}
             }
-        ]
-    }
+            }
+    ]
 }

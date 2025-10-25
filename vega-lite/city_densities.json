@@ -1,11 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 700,
-    "height": 500,
-    "background": "null",
+    "height": 750,
+    "background": "white",
     "title":
     {
-        "text": "Global Cities: Population vs Population Density",
+        "text": "Global Cities: Population Density",
         "fontSize": 20,
         "anchor": "start"
     },
@@ -27,77 +27,125 @@
         }
     },
     "data":
-        {
-        "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/population_density_2025.csv"
-        },
-    "mark":
     {
-        "type": "point",
-        "filled": true,
-        "size": 125,
-        "opacity": 0.75
+        "url": "https://raw.githubusercontent.com/BrokeBlake/FIT3179-Data-Visualisation-A2/main/data/population_density_2025.csv",
+        "format":
+        {
+            "type": "csv",
+            "parse": { "Population_Density": "number" }
+        }
     },
-    "transform":
+    "layer":
+    
     [
         {
-            "calculate": "datum.Population / 1000000",
-            "as":
-            "Population_millions"
+            "mark":
+            {
+                "type": "bar"
+            },
+            "encoding":
+            {
+                "x":
+                {
+                    "field": "Population_Density",
+                    "type": "quantitative",
+                    "title": "Population Density (people per km²)",
+                    "scale":
+                    {
+                        "type": "linear",
+                        "domain": [0, 30000]
+                    }
+                },
+                "y":
+                {
+                    "field": "City",
+                    "type": "nominal",
+                    "title": null,
+                    "sort":
+                    {
+                        "field": "Population_Density",
+                        "op": "max",
+                        "order": "descending"
+                    },
+                    "axis":
+                    {
+                        "labels": false,
+                        "ticks": false
+                    }
+                },
+                "color":
+                {
+                    "field": "Region",
+                    "type": "nominal",
+                    "title": "Region"
+                },
+                "tooltip":
+                [
+                    {
+                        "field": "City",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Country",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Region",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Population_Density",
+                        "type": "quantitative",
+                        "title": "Density (pp / km²)"
+                    },
+                    {
+                        "field": "Population",
+                        "type": "quantitative",
+                        "title": "Total Population",
+                        "format": ",.0f"
+                    }
+                ]
+            }
+        },
+        {
+            "transform":
+            [
+                {
+                    "filter": "datum.City == 'Mumbai' && datum.City == 'Kinshasa' && datum.City == 'Hong Kong' && datum.City == 'New Delhi' && datum.City == 'Singapore' && datum.City == 'Istanbul' && datum.City == 'Shanghai' && datum.City == 'Moscow' && datum.City == 'Jakarta' && datum.City == 'Beijing' && datum.City == 'Mexico City' && datum.City == 'Paris' && datum.City == Tokyo' && datum.City == 'London' && datum.City == 'Osaka' && datum.City == 'Dhaka'"
+                }
+            ],
+            "mark":
+            {
+                "type": "text",
+                "align": "left",
+                "dx": 2,
+                "color": "black",
+                "fontSize": 12,
+                "font": "Calibri"
+            },
+            "encoding":
+            {
+                "text":
+                {
+                    "field": "City"
+                },
+                "x":
+                {
+                    "field": "Population_Density",
+                    "type": "quantitative"
+                },
+                "y":
+                {
+                    "field": "City",
+                    "type": "nominal",
+                    "sort":
+                    {
+                        "field": "Population_Density",
+                        "op": "max",
+                        "order": "descending"
+                    }
+                }
+            }
         }
-    ],
-    "encoding":
-    {
-        "x":
-        {
-            "field": "Population_Density",
-            "type": "quantitative",
-            "title": "Population Density (people per km²)",
-            "scale":
-            {
-                "type": "linear"
-            }
-        },
-        "y":
-        {
-            "field": "Population_millions",
-            "type": "quantitative",
-            "title": "Total Population (Millions)",
-            "scale":
-            {
-                "type": "linear"
-            }
-        },
-        "color":
-        {
-            "field": "Region",
-            "type": "nominal",
-            "title": "Region"
-        },
-        "tooltip":
-        [
-            {
-                "field": "City",
-                "type": "nominal"
-            },
-            {
-                "field": "Country",
-                "type": "nominal"
-            },
-            {
-                "field": "Region",
-                "type": "nominal"
-            },
-            {
-                "field": "Population_Density",
-                "type": "quantitative",
-                "title": "Density (pp / km²)"
-            },
-            {
-                "field": "Population",
-                "type": "quantitative",
-                "title": "Total Population",
-                "format": ",.0f"
-            }
-        ]
-    }
+    ]
 }
