@@ -100,7 +100,11 @@
                 "title": "Density (people/km²)",
                 "orient": "bottom",
                 "legendX": 200,
-                "legendY": 50
+                "legendY": 50,
+                "strokeColor": "#ccc",
+                "fillColor": "white",
+                "cornerRadius": 10,
+                "padding": 10
             }
         },
         "order":

@@ -118,10 +118,14 @@
                     {
                         "values": [0, 1000, 5000, 19530],
                         "orient": "none",
-                        "legendX": 200,
-                        "legendY": 475,
+                        "legendX": 190,
+                        "legendY": 465,
                         "direction": "horizontal",
-                        "gradientLength": 180
+                        "gradientLength": 180,
+                        "strokeColor": "#ccc",
+                        "fillColor": "whitesmoke",
+                        "cornerRadius": 10,
+                        "padding": 10
                     }
                 },
                 "tooltip":

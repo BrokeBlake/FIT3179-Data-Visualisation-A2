@@ -107,7 +107,11 @@
                     {
                         "orient": "none",
                         "legendX": 100,
-                        "legendY": 100
+                        "legendY": 100,
+                        "strokeColor": "#ccc",
+                        "fillColor": "white",
+                        "cornerRadius": 10,
+                        "padding": 10
                     },
                     "scale":
                     {

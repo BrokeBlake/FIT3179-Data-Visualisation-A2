@@ -122,11 +122,15 @@
                     {
                         "title": "Year Considered Developed: ",
                         "orient": "none",
-                        "legendX": 160,
-                        "legendY": 420,
+                        "legendX": 155,
+                        "legendY": 425,
                         "direction": "horizontal",
                         "columns": 4,
-                        "gradientLength": 180
+                        "gradientLength": 180,
+                        "strokeColor": "#ccc",
+                        "fillColor": "whitesmoke",
+                        "cornerRadius": 10,
+                        "padding": 10
                     }
                 },
                 "tooltip":
