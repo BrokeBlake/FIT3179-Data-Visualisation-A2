@@ -92,8 +92,8 @@
             "mark":
             {
                 "type": "rect",
-                "width": 3,
-                "height": 3.6
+                "width": 2.65,
+                "height": 3.25
             },
             "encoding":
             {
