@@ -32,6 +32,12 @@
             font-size: 40px;
             font: Segoe UI;
         }
+
+        h2
+        {
+            font-size: 24px;
+            font: Segoe UI;
+        }
         .primary-container
         {
             display: flex;
@@ -47,10 +53,20 @@
         .horizontal-container
         {
             display: flex;
-            flex-direction: vertical;
+            flex-direction: row;
+            max-width: 1080px;
+            background-color: none;
+            padding: 2px;
+            border-radius: 5px;
+            gap: 2px;
+        }
+
+        .vertical-container {
+            display: flex;
+            flex-direction: column;
             max-width: 1080px;
             background-color: #ffffffcf;
-            padding: 2px;
+            padding: 0px;
             border-radius: 5px;
             gap: 2px;
         }
@@ -95,6 +111,16 @@
             border-radius: 5px;
             margin: 10px;
         }
+        .justify-align-text
+        {
+            flex: 1;
+            display: block;
+            text-align: justify;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px;
+        }
 
         
 
@@ -104,255 +130,259 @@
 
 <body>
     <div class="primary-container">
-        <div class="horizontal-container">
-            <div class="centre-align-text">
-                <h1 style="font-family: 'Segoe UI', Calibri, sans-serif;"> Urban Sprawl: A Symptom of Modern Melbourne</h1>
-            </div>
-            
-        </div>
-        <div class="horizontal-container">
-            <div class="block-container" style="flex: 65%;" id= "chloropleth_map"></div>
-            <div class="block-container" style="flex: 35%;">
+        <div class="vertical-container">
+            <div class="horizontal-container">
                 <div class="centre-align-text">
-                    <p>
-                    <br>
-
-                    <b>Urban Sprawl</b> refers to the widespread, most often unplanned expansion of residential areas
-                    at the edges of cities.
-                    
-                    <br><br>
-                    <b>Melbourne</b>, dubbed
-                    the “Doughnut City” in the late 1980s, has witnessed a rapid outward growth over the last half century,
-                    reshaping the way people live, work, and move.
-
-                    <br><br>
-                    The impact of urban sprawl remains a highly debated topic among planners, economists, and communities.
-                    
-                    <br><br>
-                    Use the map to the <b>left</b> to explore the population density of every suburb in Melbourne.
-                    Change the <b>"Choose year:"</b> slider below to see how the population of your selected suburb has evolved over time
-                    
-                    </p>
-                </div>
-
-                <div class= "left-align-text" id= "year-control">
-                    <label for="year-slider">
-                        <strong>
-                            Choose year:
-                        </strong>
-                    </label>
-                    <input id="year-slider" type="range" min="1975" max="2030" step="5" value="2025" style="width: 250px;">
-                    <span id="year-value">
-                        2025
-                    </span>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="horizontal-container">
-            <div class="block-container" style="flex: 50%; padding: 30px;">
-                <div class="centre-align-text">
-                    <p>
-
-                        Those that <span style="color: green;"><b>Support</b></span> Urban Sprawl highlight its role in 
-                        <b>making housing more affordable</b>, providing families with <b>larger homes and backyards</b>, 
-                        and aligning with <b>consumer preferences</b> towards low density living.
-
-                        <br><br>
-
-                        <span style="color: red;"><b>Critics</b></span>, on the other hand, point to
-                            <b>increased automobile dependency</b>, <b>inefficient land use</b>, 
-                            the <b>loss of prime agricultural land</b>, and <b> boring, monotone architecture </b> as major drawbacks.
-                        
-
-                        <br><br>
-
-                        Over the last half century, Melbourne's <b>Suburban (2000-4000 people per square kilometre)</b> and <b>Periurban (500-2000)</b> population has dropped from a
-                        total of 62% of the population to around 43% of the population. This 18% drop has mainly been pickup up by <b>Urban residential densities (4000-10000)</b> and 
-                        <b>City Centre Densities (10000+)</b>, increasing from ~8% to 21% of the population.
-                    </p>
+                    <h1 style="font-family: 'Segoe UI', Calibri, sans-serif;"> Urban Sprawl: A Symptom of Modern Melbourne</h1>
                 </div>
             </div>
-            <div class="block-container" style="flex: 60%;"  id="area_chart">
-                <div class="centre-align-text">
+            <div class="horizontal-container">
+                <div class="block-container" style="flex: 65%; padding: 0px; padding-left: 10px;" id= "chloropleth_map"></div>
+                <div class="block-container" style="flex: 35%;">
+                    <div class="justify-align-text">
+                        <p>
+                        <br>
 
-                </div>
-
-            </div>
-        </div>
-
-        <div class="horizontal-container">
-            <div class="block-container" style="flex: 40%; padding: 25px;">
-                <div class="centre-align-text">
-                    <p>
-                        One of the primary reasons for this change, is that since the early 1990s, the Victorian Government has introduced several <b>urban growth strategies</b>
-                        designed to contain sprawl while promoting <b>inner-city revitalisation</b>.
+                        <b>Urban Sprawl</b> refers to the widespread, most often unplanned expansion of residential areas
+                        at the edges of cities.
                         
                         <br><br>
-
-                        Most famously, the 2001 initiaitive 
-                        <a href="https://www.planning.vic.gov.au/guides-and-resources/strategies-and-initiatives/melbournes-strategic-planning-history/melbourne-2030-planning-for-sustainable-growth-2002"><b>Melbourne 2030</b></a>
-                        sought to curb urban sprawl by introducing urban growth boundaries,
-                        reducing the proportion of low-density housing, and redirecting development.
-                    </p>
-                </div>
-                <div class="centre-align-text">
-                    <p>
-
-                    
-                        These policies have had a significant impact on revitalising Melbourne's innermost suburbs.
-                        CBD-adjacent suburbs such as <span style="color: #0000ff;"><b>Melbourne</b></span>, <span style="color: #0000ff;"><b>Southbank</b></span>,
-                        and <span style="color: #0000ff;"><b>Carlton</b></span> have seen over 1000% growth in the last 50 years.
-                        
-                        <br><br>
-                        
-                        The <span style="color: #0000ff;"><b>Docklands'</b></span> population has increased from just 30 residents to over 33,000, more than a 100,000% increase.
+                        <b>Melbourne</b>, dubbed
+                        the “Doughnut City” in the late 1980s, has witnessed a rapid outward growth over the last half century,
+                        reshaping the way people live, work, and move.
 
                         <br><br>
+                        The impact of urban sprawl remains a highly debated topic among planners, economists, and communities.
+                        
+                        <br><br>
+                        Use the map to the <b>left</b> to explore the population density of every suburb in Melbourne.
+                        Change the <b>"Choose year:"</b> slider below to see how the population of your selected suburb has evolved over time
+                        
+                        </p>
+                    </div>
 
-                        While <b>Outer-Suburban localities</b> such as <span style="color: #ffb300;"><b>Point Cook</b></span> and <span style="color: #ffb300;"><b>Pakenham</b></span> have also exploded in population over the last half century, 
-                        the heaviest impact these policies have had are on <b>Inner Suburban localities</b> such as <span style="color: #63cce0;"><b>Greensborough</b></span> and <span style="color: #63cce0;"><b>Mitcham</b></span> as examples, disincentivising people from moving into these areas.
+                    <div class= "left-align-text" id= "year-control">
+                        <label for="year-slider">
+                            <strong>
+                                Choose year:
+                            </strong>
+                        </label>
+                        <input id="year-slider" type="range" min="1975" max="2030" step="5" value="2025" style="width: 250px;">
+                        <span id="year-value">
+                            2025
+                        </span>
+                    </div>
 
-                    </p>
                 </div>
             </div>
-            <div class="block-container" style="flex: 60%; padding: 20px;", id="scatter_plot"></div>
+            <div class="horizontal-container">
+                <div class="block-container" style="flex: 50%;">
+                    <div class="justify-align-text">
+                        <p>
+
+                            Those that <span style="color: green;"><b>Support</b></span> Urban Sprawl highlight its role in 
+                            <b>making housing more affordable</b>, providing families with <b>larger homes and backyards</b>, 
+                            and aligning with <b>consumer preferences</b> towards low density living.
+
+                            <br><br>
+
+                            <span style="color: red;"><b>Critics</b></span>, on the other hand, point to
+                                <b>increased automobile dependency</b>, <b>inefficient land use</b>, 
+                                the <b>loss of prime agricultural land</b>, and <b> boring, monotone architecture </b> as major drawbacks.
+                            
+
+                            <br><br>
+
+                            Over the last half century, Melbourne's <b>Suburban (2000-4000 people per square kilometre)</b> and <b>Periurban (500-2000)</b> population has dropped from a
+                            total of 62% of the population to around 43% of the population. This 18% drop has mainly been pickup up by <b>Urban residential densities (4000-10000)</b> and 
+                            <b>City Centre Densities (10000+)</b>, increasing from ~8% to 21% of the population.
+                        </p>
+                    </div>
+                </div>
+                <div class="block-container" style="flex: 60%; padding: 0px; padding-right: 10px;"  id="area_chart"></div>
+            </div>
         </div>
-        
+        <div class="vertical-container">
+            <div class="centre-align-text" style="padding: 0px;">
+                <h2 style="font-family: 'Segoe UI', Calibri, sans-serif;">Melbourne's Suburbs: Population Growth between 1975 - 2025</h2>
+            </div>
+            <div class="horizontal-container">
+                <div class="block-container" style="flex: 40%;">
+                    <div class="justify-align-text">
+                        <p>
+                            One of the primary reasons for this change, is that since the early 1990s, the Victorian Government has introduced several <b>urban growth strategies</b>
+                            designed to contain sprawl while promoting <b>inner-city revitalisation</b>.
+                            
+                            <br><br>
+
+                            Most famously, the 2001 initiaitive 
+                            <a href="https://www.planning.vic.gov.au/guides-and-resources/strategies-and-initiatives/melbournes-strategic-planning-history/melbourne-2030-planning-for-sustainable-growth-2002"><b>Melbourne 2030</b></a>
+                            sought to curb urban sprawl by introducing urban growth boundaries,
+                            reducing the proportion of low-density housing, and redirecting development.
+
+                            <br><br>
+                            These policies have had a significant impact on revitalising Melbourne's innermost suburbs.
+                            CBD-adjacent suburbs such as <span style="color: #0000ff;"><b>Melbourne</b></span>, <span style="color: #0000ff;"><b>Southbank</b></span>,
+                            and <span style="color: #0000ff;"><b>Carlton</b></span> have seen over 1000% growth in the last 50 years.
+                            
+                            <br><br><br>
+                            
+                            The <span style="color: #0000ff;"><b>Docklands'</b></span> population has increased from just 30 residents to over 33,000, more than a 100,000% increase.
+
+                            <br><br>
+
+                            While <b>Outer-Suburban localities</b> such as <span style="color: #ffb300;"><b>Point Cook</b></span> and <span style="color: #ffb300;"><b>Pakenham</b></span> have also exploded in population over the last half century, 
+                            the heaviest impact these policies have had are on <b>Inner Suburban localities</b> such as <span style="color: #63cce0;"><b>Greensborough</b></span> and <span style="color: #63cce0;"><b>Mitcham</b></span> as examples, disincentivising people from moving into these areas.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="block-container" style="flex: 60%; padding-left: 0px;", id="scatter_plot"></div>
+            </div>
+        </div>
     </div>
 
 
 
     <div class="primary-container">
-        <div class="horizontal-container">
-            <div class="block-container" style="flex: 65%;" id="point_map"> </div>
-            <div class="block-container" style="flex: 35%;">
-                <div class="centre-align-text">
-                    <p>  
-                        
-                        Melbourne's <b>Built-up area</b> has grown largely synonymously with population.
+        <div class="vertical-container">
+            <div class="centre-align-text" style="padding: 0px;">
+                <h2 style="font-family: 'Segoe UI', Calibri, sans-serif;">Built-up evolution of the city of Melbourne</h2>
+            </div>
+            <div class="horizontal-container">
+                <div class="block-container" style="flex: 65%; padding: 0px; padding-left: 10px;" id="point_map"> </div>
+                <div class="block-container" style="flex: 35%;">
+                    <div class="justify-align-text">
+                        <p>  
+                            
+                            Melbourne's <b>Built-up area</b> has grown largely synonymously with population.
 
-                        <br><br>                    
-                        
-                        Shown in this map to the left, Outer Western suburbs <b>Point Cook, Tarniet</b>
-                        as well as South-Eastern muncipalities <b>Narre Warren South, Pakenham</b>
-                        have experienced explosive industrial development to accompany their population changes.
+                            <br><br>                    
+                            
+                            Shown in this map to the left, Outer Western suburbs <b>Point Cook, Tarniet</b>
+                            as well as South-Eastern muncipalities <b>Narre Warren South, Pakenham</b>
+                            have experienced explosive industrial development to accompany their population changes.
 
-                        <br><br>
-                        
-                        The map to your left explores when a location in Melbourne was first considered <b>"Developed / Built-up" </b>
-                        - i.e. more than 20% of the land area contains infrastructure
+                            <br><br>
+                            
+                            The map to your left explores when a location in Melbourne was first considered <b>"Developed / Built-up" </b>
+                            - i.e. more than 20% of the land area contains infrastructure
 
-                        <br><br>
+                            <br><br>
 
-                        You may notice in this map that inner city suburbs previously touted as "having high population growth"
-                        are not considered "new built up" areas.
-                        
-                        <br><br>
+                            You may notice in this map that inner city suburbs previously touted as "having high population growth"
+                            are not considered "new built up" areas.
+                            
+                            <br><br>
 
-                        This is because these suburbs were primarily industrial
-                        before policies such as Melbourne 2030 came into effect - meaning that although they had a low
-                        population density they were still considered built-up
+                            This is because these suburbs were primarily industrial
+                            before policies such as Melbourne 2030 came into effect - meaning that although they had a low
+                            population density they were still considered built-up
 
-                        <br><br>
+                            <br><br>
 
-                        <i>Please note that due to data limitations, areas that would have been considered built up before 1975 are not
-                        included in this map.</i>
+                            <i>Please note that due to data limitations, areas that would have been considered built up before 1975 are not
+                            included in this map.</i>
 
 
-                    </p>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="horizontal-container">
-            <div class="block-container" style="flex: 45%;"> 
-                <div class="centre-align-text">
-                    <p>   
-                        The City of Melbourne is not the only city suffering from Urban Sprawl.
-                        Other western cities have also experienced rapid growth in the last few decades.
-                        
-                        <br><br>
-                        
-                        Without proper regulation, these cities have sprawled outwards - with residents
-                        abandoning downtown residential areas in favour of lower density suburban living.
 
-                        <br><br>
-
-                        The cities of <b><span style="color: purple;">Miami</span></b>, <b><span style="color: purple;">Los Angeles</span></b>, and <b><span style="color: purple;">Detriot</span></b> are some key examples of large cities which expansion
-                        has been left almost unchecked - with city centres often being referred to as "ghost towns".
-                    </p>
-                </div>
-
-
-                <div class="centre-align-text">
-
-                    <p>
-                        However, there are several modern, highly developed cities Melbourne can learn from if it wishes for higher-density living.
-
-                        <br><br>
-
-                        The Japanese Muncipalities of <span style="color: blue;"><b>Osaka</b></span> and <span style="color: blue;"><b>Tokyo</b></span> both boast almost twice the population density of Melbourne.
-                        
-                        <br><br>
-
-                        European cities <span style="color: darkorange;"><b>London</b></span>, <span style="color: darkorange;"><b>Paris</b></span>, and <span style="color: darkorange;"><b>Moscow</b></span> reach around 7000 peolpe per square kilometre, with infrastructure designed around higher-density living.
-
-                        <br><br>
-
-                        Modern Chinese Megalopolises <span style="color: blue;"><b>Beijing</b></span>, <span style="color: blue;"><b>Shanghai</b></span>, and <span style="color: blue;"><b>Guangzhou</b></span> (including Hong Kong, Shenzen) boast almost
-                        10,000 people per kilometre squared.
-                    </p>
-
-                </div>
-
+        <div class="vertical-container">
+            <div class="centre-align-text" style="padding: 0px;">
+                <h2 style="font-family: 'Segoe UI', Calibri, sans-serif;">How Melbourne's Population Density compares to Global cities</h2>
             </div>
-            <div class="block-container" style="flex: 55%;" id="bar_chart"></div>
+            <div class="horizontal-container">
+                <div class="block-container" style="flex: 45%;"> 
+                    <div class="justify-align-text">
+                        <p>   
+                            The City of Melbourne is not the only city suffering from Urban Sprawl.
+                            Other western cities have also experienced rapid growth in the last few decades.
+                            
+                            <br><br>
+                            
+                            Without proper regulation, these cities have sprawled outwards - with residents
+                            abandoning downtown residential areas in favour of lower density suburban living.
+
+                            <br><br>
+
+                            The cities of <b><span style="color: purple;">Miami</span></b>, <b><span style="color: purple;">Los Angeles</span></b>, and <b><span style="color: purple;">Detriot</span></b> are some key examples of large cities which expansion
+                            has been left almost unchecked - with city centres often being referred to as "ghost towns".
+                        </p>
+                    </div>
+
+
+                    <div class="justify-align-text">
+
+                        <p>
+                            However, there are several modern, highly developed cities Melbourne can learn from if it wishes for higher-density living.
+
+                            <br><br>
+
+                            The Japanese Muncipalities of <span style="color: blue;"><b>Osaka</b></span> and <span style="color: blue;"><b>Tokyo</b></span> both boast almost twice the population density of Melbourne.
+                            
+                            <br><br>
+
+                            European cities <span style="color: darkorange;"><b>London</b></span>, <span style="color: darkorange;"><b>Paris</b></span>, and <span style="color: darkorange;"><b>Moscow</b></span> reach around 7000 peolpe per square kilometre, with infrastructure designed around higher-density living.
+
+                            <br><br>
+
+                            Modern Chinese Megalopolises <span style="color: blue;"><b>Beijing</b></span>, <span style="color: blue;"><b>Shanghai</b></span>, and <span style="color: blue;"><b>Guangzhou</b></span> (including Hong Kong, Shenzen) boast almost
+                            10,000 people per kilometre squared.
+                        </p>
+                    </div>
+                </div>
+                <div class="block-container" style="flex: 55%; padding: 0px; padding-right: 10px;" id="bar_chart"></div>
+            </div>
         </div>
-
-        <div class="horizontal-container">
-            <div class="block-container" style="flex: 45%; padding: 30px;">
-                <div class="centre-align-text">
-                    <p>
-                        In Conclusion, Melbourne's increased Urban Sprawl can be
-                        intepreted as either a <b>Positive development for the city</b>,
-                        or a <b>negative consequence of urban growth</b>, all depending
-                        on your perspective.
-
-                        <br><br>
-
-                        While Policies have been introduced in the City of Melbourne to help combat
-                        this Urban sprawl as a whole, it remains yet to see exactly how effective
-                        these policies will be in the long run.
-
-                    </p>
-                </div>
+        <div class="vertical-container">
+            <div class="centre-align-text" style="padding: 0px;">
+                <h2 style="font-family: 'Segoe UI', Calibri, sans-serif;">Conclusion & Metadata</h2>
             </div>
-            <div class="block-container" style="flex: 55%; padding: 0px;">
-                <div class="centre-align-text">
-                    <p>
+            <div class="horizontal-container">
+                <div class="block-container" style="flex: 45%; padding: 30px;">
+                    <div class="justify-align-text">
+                        <p>
+                            In Conclusion, Melbourne's increased Urban Sprawl can be
+                            intepreted as either a <b>Positive development for the city</b>,
+                            or a <b>negative consequence of urban growth</b>, all depending
+                            on your perspective.
 
-                        Made by Blake Travers in October 2025 as part of FIT3179's Semester 2 2025 Assignment 2
+                            <br><br>
 
-                        <br><br>
+                            While Policies have been introduced in the City of Melbourne to help combat
+                            this Urban sprawl as a whole, it remains yet to see exactly how effective
+                            these policies will be in the long run.
 
-                        <b>Data Sources:</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="block-container" style="flex: 55%; padding: 0px;">
+                    <div class="centre-align-text">
+                        <p>
+
+                            Made by Blake Travers in October 2025 as part of FIT3179's Semester 2 2025 Assignment 2
+
+                            <br><br>
+
+                            <b>Data Sources:</b>
+                            
+                            <br><br>
+
+                            Population density by City: <a href="https://ourworldindata.org/grapher/population-density-by-city">ourworldindata.org</a>,  <a href="https://chartingtransport.com/trends-in-major-city-population-density/">chartingtransport.com</a>
+                            <br><br>
+                            Melbourne Built up & Population raster: <a href="https://human-settlement.emergency.copernicus.eu/download.php">human-settlement.emergency.copernicus.eu</a>
+                            <br><br>
+                            Suburb boundaries: <a href="https://data.gov.au/data/dataset/vic-suburb-locality-boundaries-geoscape-administrative-boundaries">https://data.gov.au/data</a>
                         
-                        <br><br>
-
-                        Population density by City: <a href="https://ourworldindata.org/grapher/population-density-by-city">ourworldindata.org</a>,  <a href="https://chartingtransport.com/trends-in-major-city-population-density/">chartingtransport.com</a>
-                        <br><br>
-                        Melbourne Built up & Population raster: <a href="https://human-settlement.emergency.copernicus.eu/download.php">human-settlement.emergency.copernicus.eu</a>
-                        <br><br>
-                        Suburb boundaries: <a href="https://data.gov.au/data/dataset/vic-suburb-locality-boundaries-geoscape-administrative-boundaries">https://data.gov.au/data</a>
-                    
-                    </p>
+                        </p>
+                    </div>
                 </div>
-
-
             </div>
-
         </div>
     </div>
 

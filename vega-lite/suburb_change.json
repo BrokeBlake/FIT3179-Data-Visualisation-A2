@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 550,
     "height": 600,
-    "background": "null",
+    "background": "white",
     "title":
     {
         "text": "Melbourne: Population Growth by Suburb (1975 - 2025)",
@@ -171,7 +171,7 @@
                         "param": "region_select",
                         "value": 1
                     },
-                    "value": 0.25
+                    "value": 0.2
                 }
             }
         },
@@ -186,7 +186,7 @@
             "transform":
             [
                 {
-                    "filter": "indexof(['Docklands', 'Point Cook', 'Cranbourne East', 'Melbourne', 'Southbank', 'Carlton', 'Mitcham', 'Clayton', 'Pakenham', 'Greensborough', 'Frankston'], datum.suburb) >= 0"
+                    "filter": "indexof(['Docklands', 'Point Cook', 'Cranbourne East', 'Melbourne', 'Southbank', 'Carlton', 'Mitcham', 'Clayton', 'Pakenham', 'Frankston'], datum.suburb) >= 0"
                 }
             ],
             "mark": {
@@ -230,16 +230,16 @@
             "transform":
             [
                 {
-                "filter": "indexof(['Docklands', 'Point Cook', 'Cranbourne East', 'Melbourne', 'Southbank', 'Carlton', 'Mitcham', 'Clayton', 'Pakenham', 'Greensborough', 'Frankston'], datum.suburb) >= 0"
+                "filter": "indexof(['Docklands', 'Point Cook', 'Cranbourne East', 'Melbourne', 'Southbank', 'Carlton', 'Mitcham', 'Clayton', 'Pakenham', 'Frankston'], datum.suburb) >= 0"
                 }
             ],
             "mark":
             {
                 "type": "point",
                 "filled": false,
-                "size": 95,
+                "size": 100,
                 "stroke": "black",
-                "strokeWidth": 0.7
+                "strokeWidth": 1
             },
             "encoding":
             {
